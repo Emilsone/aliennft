@@ -21,7 +21,7 @@ export default function Header() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-20">
                     {/* Logo */}
-                    <div className="flex-shrink-0 flex items-center">
+                    <div className="flex-shrink-0 flex items-center ">
                         <Image src="/aliennft-logo.svg" alt="BetaRate Logo" width={170} height={120} className="h-10 w-auto" />
                     </div>
 
@@ -44,7 +44,7 @@ export default function Header() {
                             </button>
                             {/* Discord & Connect Buttons */}
                             <a href="#" className="bg-[#141B22] uppercase text-white px-6 py-2.5  hover:bg-[#141B22] transition flex items-center space-x-2 font-bold">
-                                 <Image src="/discord-icon.svg" alt="BetaRate Logo" width={90} height={90} className="h-6 w-auto" />
+                                <Image src="/discord-icon.svg" alt="BetaRate Logo" width={90} height={90} className="h-6 w-auto" />
                                 <span>Discord</span>
                             </a>
                             <a href="#" className="bg-[#21E786] text-[#000000] px-6 py-2.5 transition uppercase flex space-x-2 items-center font-bold">

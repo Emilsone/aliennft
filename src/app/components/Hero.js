@@ -70,7 +70,7 @@ export default function Home() {
 
                         <button className="
               w-full md:w-auto
-              border-2 border-[#14f195] 
+              border-1 border-[#14f195] 
               text-white font-semibold 
               text-[14px] tracking-[1px] 
               px-7 py-[10px] bg-transparent
