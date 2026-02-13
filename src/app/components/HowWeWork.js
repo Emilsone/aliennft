@@ -5,7 +5,7 @@ export default function HowItWorks() {
         {
             step: "STEP 1",
             title: "Connect Your Wallet",
-            icon: "/icons/nfticon.svg",
+            icon: "/icons/iconwallet.svg",
         },
         {
             step: "STEP 2",
@@ -39,10 +39,10 @@ export default function HowItWorks() {
                 {steps.map((item, index) => (
                     <div
                         key={index}
-                        className="relative group bg-[#0f1b25] rounded-sm px-8 py-8 text-center overflow-hidden transition-all duration-300"
+                        className="relative group bg-[#0f1b25] rounded-sm px-8 py-6 text-center overflow-hidden transition-all duration-300 flex flex-col justify-between min-h-[110px]"
                     >
                         {/* Hover Borders */}
-                        <span className="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-[#21E786]  opacity-0 group-hover:opacity-100 transition-all duration-300"></span>
+                        <span className="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-[#21E786] opacity-0 group-hover:opacity-100 transition-all duration-300"></span>
                         <span className="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-[#21E786] opacity-0 group-hover:opacity-100 transition-all duration-300"></span>
 
                         {/* Icon */}
@@ -50,7 +50,7 @@ export default function HowItWorks() {
                             <Image
                                 src={item.icon}
                                 alt="icon"
-                                className=" object-contain"
+                                className="object-contain"
                                 width={64}
                                 height={64}
                             />
@@ -68,6 +68,7 @@ export default function HowItWorks() {
                     </div>
                 ))}
             </div>
+
         </section>
     );
 }
