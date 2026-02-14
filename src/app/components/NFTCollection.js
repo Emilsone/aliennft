@@ -45,7 +45,7 @@ export default function MusicCards() {
     ];
 
     return (
-        <main className="grid place-items-center min-h-screen bg-black py-10">
+        <main className="grid place-items-center min-h-screen bg-[#000000] py-10">
             <div className="w-full max-w-7xl">
                 <h1 className="text-2xl sm:text-3xl md:text-3xl lg:text-3xl font-bold text-gray-200 mb-8 py-12 sm:py-2 uppercase text-center lg:text-left">
                     Hot Collection
