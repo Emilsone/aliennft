@@ -1,6 +1,7 @@
 import Header from './components/Header';
 import Hero from './components/Hero';
 import HowWeWork from './components/HowWeWork';
+import NFTCollection from './components/NFTCollection';
 import Footer from './components/Footer';
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <Header />
       <Hero />
       <HowWeWork />
+      <NFTCollection />
       <Footer />
     </div>
   );

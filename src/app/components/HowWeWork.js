@@ -25,7 +25,7 @@ export default function HowItWorks() {
     ];
 
     return (
-        <section className="bg-black py-20 px-6">
+        <section className="bg-black pt-10 px-6">
             {/* Heading */}
             <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-wide">
