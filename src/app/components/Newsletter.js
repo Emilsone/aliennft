@@ -1,7 +1,7 @@
 import Image from 'next/image';
 export default function Newsletter() {
     return (
-        <section className=" bg-[#000000]/45">
+        <section className=" bg-[#000000]">
             <div className=" py-8 sm:py-24 lg:py-32">
                 <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 lg:grid-cols-12 lg:gap-8 lg:px-8">
                     <div className="max-w-xl text-3xl tracking-tight text-white sm:text-4xl lg:col-span-7">
