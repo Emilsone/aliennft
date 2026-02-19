@@ -70,7 +70,7 @@ function FeatureCard({ number, title, text }) {
             <span className="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-[#21E786] opacity-0 group-hover:opacity-100 transition-all duration-300"></span>
             <span className="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-[#21E786] opacity-0 group-hover:opacity-100 transition-all duration-300"></span>
             {/* BACK NUMBER */}
-            <span className="absolute top-6 right-6 text-[86px] font-bold text-[#21E786]/20 leading-none pointer-events-none">
+            <span className="absolute top-6 right-6 text-[86px] font-bold text-[#21E786]/23 leading-none pointer-events-none">
                 {number}
             </span>
 
@@ -79,7 +79,7 @@ function FeatureCard({ number, title, text }) {
                 {title}
             </h3>
 
-            <p className="relative text-[#C2C3C5] text-sm leading-relaxed max-w-[90%]">
+            <p className="relative text-[#FFFFFF] text-sm leading-relaxed max-w-[90%]">
                 {text}
             </p>
         </div>

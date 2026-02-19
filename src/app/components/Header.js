@@ -57,7 +57,7 @@ export default function Header() {
                     <div className="md:hidden flex items-center">
                         <button
                             onClick={() => setMenuOpen(!menuOpen)}
-                            className="text-white dark:text-gray-200 focus:outline-none"
+                            className="text-white dark:text-white-200 focus:outline-none"
                         >
                             <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
                                 {menuOpen ? (
