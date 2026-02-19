@@ -33,7 +33,6 @@ export default function Header() {
                             <a href="#" className="text-[#FFFFFF] font-bold">About</a>
                             <a href="#" className="text-[#FFFFFF] font-bold">Roadmap</a>
                             <a href="#" className="text-[#FFFFFF] font-bold">Collection</a>
-                            <a href="#" className="text-[#FFFFFF] font-bold">Blog</a>
                             <a href="#" className="text-[#FFFFFF] font-bold">FAQs</a>
                         </div>
 
