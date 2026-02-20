@@ -58,7 +58,6 @@ export default function MusicCards() {
                             key={index}
                             className="bg-gray-900 shadow-lg  p-4 relative group"
                         >
-                            {/* Hover Borders */}
                             <span className="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-[#21E786] opacity-0 group-hover:opacity-100 transition-all duration-300"></span>
                             <span className="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-[#21E786] opacity-0 group-hover:opacity-100 transition-all duration-300"></span>
                             <div className="relative w-full h-64">

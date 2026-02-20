@@ -3,7 +3,7 @@ export default function StorySection() {
         <section className="relative w-full bg-[#000000] py-24 px-6">
             <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 
-                {/* LEFT CONTENT */}
+
                 <div className="max-w-xl">
                     <h2 className="text-white text-4xl font-semibold mb-6">
                         THE STORY
@@ -31,7 +31,7 @@ export default function StorySection() {
                     </button>
                 </div>
 
-                {/* RIGHT CARDS */}
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
 
                     <FeatureCard
@@ -61,7 +61,6 @@ export default function StorySection() {
     );
 }
 
-/* CARD COMPONENT */
 function FeatureCard({ number, title, text }) {
     return (
         <div
@@ -69,12 +68,11 @@ function FeatureCard({ number, title, text }) {
         >
             <span className="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-[#21E786] opacity-0 group-hover:opacity-100 transition-all duration-300"></span>
             <span className="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-[#21E786] opacity-0 group-hover:opacity-100 transition-all duration-300"></span>
-            {/* BACK NUMBER */}
+         
             <span className="absolute top-6 right-6 text-[86px] font-bold text-[#21E786]/23 leading-none pointer-events-none">
                 {number}
             </span>
 
-            {/* CONTENT */}
             <h3 className="relative text-[#FFFFFF] text-md font-bold mb-4">
                 {title}
             </h3>
