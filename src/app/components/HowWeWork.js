@@ -28,7 +28,7 @@ export default function HowItWorks() {
         <section className="bg-black pt-10 px-6">
             {/* Heading */}
             <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-wide">
+                <h2 className="text-4xl md:text-5xl font-extrabold text-white/85  tracking-wide">
                     HOW {" "}
                     <span className="text-[#21E786]">NFTALIEN</span> WORK
                 </h2>
@@ -62,7 +62,7 @@ export default function HowItWorks() {
                         </p>
 
                         {/* Title */}
-                        <h3 className="text-white text-lg font-semibold">
+                        <h3 className="text-white/70  text-lg font-semibold">
                             {item.title}
                         </h3>
                     </div>

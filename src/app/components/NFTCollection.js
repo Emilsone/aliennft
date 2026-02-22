@@ -70,7 +70,7 @@ export default function MusicCards() {
                             </div>
 
                             <div className="p-4">
-                                <h3 className="text-white text-xl font-bold uppercase">
+                                <h3 className="text-white/85 text-xl font-bold uppercase">
                                     {card.title}
                                 </h3>
 

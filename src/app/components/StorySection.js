@@ -5,7 +5,7 @@ export default function StorySection() {
 
 
                 <div className="max-w-xl">
-                    <h2 className="text-white text-4xl font-semibold mb-6">
+                    <h2 className="text-white/85 text-4xl font-semibold mb-6">
                         THE STORY
                     </h2>
 
@@ -17,12 +17,12 @@ export default function StorySection() {
                     <div className="flex gap-16 mb-10 flex-wrap">
                         <div>
                             <p className="text-[#F5F5F5]  text-sm mb-1">Total Item</p>
-                            <p className="text-white text-4xl font-bold">2240+</p>
+                            <p className="text-white/85 text-4xl font-bold">2240+</p>
                         </div>
 
                         <div>
                             <p className="text-[#F5F5F5] text-sm mb-1">Profiles Whitelisted</p>
-                            <p className="text-white text-4xl font-bold">1000+</p>
+                            <p className="text-white/85 text-4xl font-bold">1000+</p>
                         </div>
                     </div>
 
@@ -73,11 +73,11 @@ function FeatureCard({ number, title, text }) {
                 {number}
             </span>
 
-            <h3 className="relative text-[#FFFFFF] text-md font-bold mb-4">
+            <h3 className="relative text-[#FFFFFF]/85 text-md font-bold mb-4">
                 {title}
             </h3>
 
-            <p className="relative text-[#FFFFFF] text-sm leading-relaxed max-w-[90%]">
+            <p className="relative text-[#FFFFFF]/85 text-sm leading-relaxed max-w-[90%]">
                 {text}
             </p>
         </div>

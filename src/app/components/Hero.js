@@ -1,6 +1,6 @@
 export default function Home() {
     return (
-        <main className="relative h-screen w-full overflow-hidden bg-black">
+        <main className="relative h-screen w-full overflow-hidden bg-black ">
 
             {/* Background Image */}
             <div
@@ -34,7 +34,7 @@ export default function Home() {
                     {/* Heading */}
                     <h1 className="
             text-[38px] md:text-[64px]
-            font-extrabold tracking-[2px] text-white 
+            font-extrabold tracking-[2px] text-white/85 
             mb-6
             md:whitespace-nowrap
           ">
@@ -71,7 +71,7 @@ export default function Home() {
                         <button className="
               w-full md:w-auto
               border-1 border-[#14f195] 
-              text-white font-semibold 
+              text-white/70  font-semibold 
               text-[14px] tracking-[1px] 
               px-7 py-[10px] bg-transparent
             ">

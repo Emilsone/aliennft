@@ -4,7 +4,7 @@ export default function Newsletter() {
         <section className=" bg-[#000000]">
             <div className=" py-8 sm:py-24 lg:py-32">
                 <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 lg:grid-cols-12 lg:gap-8 lg:px-8">
-                    <div className="max-w-xl text-3xl tracking-tight text-white sm:text-4xl lg:col-span-7">
+                    <div className="max-w-xl text-3xl tracking-tight text-white/85  sm:text-4xl lg:col-span-7">
                         <h2 className="inline sm:block lg:inline xl:block font-bold capitalize">Want product news and updates?</h2>
                         <p className="inline sm:block lg:inline xl:block text-lg  py-2">Sign up for our newsletter.</p>
                     </div>
@@ -17,7 +17,7 @@ export default function Newsletter() {
                                 type="email"
                                 autoComplete="email"
                                 required
-                                className="min-w-0 flex-auto  border-0 bg-white/10 px-3.5 py-3 text-white shadow-sm ring-1 ring-inset ring-[#21E786]/10 placeholder:text-white/75 focus:ring-2 focus:ring-inset focus:ring-[#21E786] sm:text-sm sm:leading-6"
+                                className="min-w-0 flex-auto  border-0 bg-white/10 px-3.5 py-3 text-white/85  shadow-sm ring-1  placeholder:text-white    sm:text-sm sm:leading-6"
                                 placeholder="Enter your email"
                             />
                             <button

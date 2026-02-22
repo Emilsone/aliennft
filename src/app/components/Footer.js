@@ -7,7 +7,7 @@ export default function Footer() {
         <div className=" flex items-center justify-center mb-8">
           <Image src="/aliennft-logo.svg" alt="AlienNFT Logo" width={170} height={120} className="h-10 w-auto" />
         </div>
-        <nav className="flex flex-col md:flex-row flex-wrap justify-center gap-x-12 gap-y-3 text-neutral-100 font-semibold hover:text-white no-underline uppercase" aria-label="Footer">
+        <nav className="flex flex-col md:flex-row flex-wrap justify-center gap-x-12 gap-y-3 text-white/85 font-semibold hover:text-white no-underline uppercase" aria-label="Footer">
           <a href="#" className="">Home</a>
           <a href="#" className="">About</a>
           <a href="#" className="">Blog</a>
