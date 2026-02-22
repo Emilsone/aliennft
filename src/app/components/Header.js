@@ -22,7 +22,7 @@ export default function Header() {
                 <div className="flex justify-between items-center h-20">
                     {/* Logo */}
                     <div className="flex-shrink-0 flex items-center ">
-                        <Image src="/aliennft-logo.svg" alt="BetaRate Logo" width={170} height={120} className="h-10 w-auto" />
+                        <Image src="/alienlogo.svg" alt="BetaRate Logo" width={170} height={120} className="h-10 w-auto" />
                     </div>
 
                     {/* Desktop Menu */}
