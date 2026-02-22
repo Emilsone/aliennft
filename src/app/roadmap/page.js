@@ -1,73 +1,12 @@
 "use client";
 
-import Link from "next/link";
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 function cx(...classes) {
     return classes.filter(Boolean).join(" ");
 }
 
-const phases = [
-    {
-        id: "phase1",
-        num: "01",
-        label: "GENESIS",
-        status: "complete",
-        date: "Q1 – Q2 · 2023",
-        completion: 100,
-        desc: "The origin mission. From concept to code — establishing the foundation of the NFTAlien universe. Smart contracts deployed, art generated, the colony founded.",
-        missions: [
-            { state: "done", num: "01", title: "Smart Contract Deployment", desc: "ERC-721A contract audited and deployed on Ethereum mainnet with gas optimisation." },
-            { state: "done", num: "02", title: "2525 Aliens Minted", desc: "Full collection minted and revealed. All traits randomised on-chain via Chainlink VRF." },
-            { state: "done", num: "03", title: "Whitelist Program", desc: "1000+ wallets whitelisted. Oversubscribed within 48 hours of announcement." },
-            { state: "done", num: "04", title: "Discord Colony Launch", desc: "Community of 10,000+ holders assembled across Discord and Twitter in 30 days." },
-        ],
-    },
-    {
-        id: "phase2",
-        num: "02",
-        label: "COLONY",
-        status: "complete",
-        date: "Q3 – Q4 · 2023",
-        completion: 100,
-        desc: "Building the infrastructure of the colony. Staking, token rewards, and the first wave of luxury brand partnerships that set NFTAlien apart from every other project.",
-        missions: [
-            { state: "done", num: "01", title: "$ALIEN Token Launch", desc: "Native utility token deployed. Staking pools opened for all 2525 holders." },
-            { state: "done", num: "02", title: "Merch Drop #1", desc: "Exclusive physical merchandise unlocked for top-tier holders. Sold out in 6 hours." },
-            { state: "done", num: "03", title: "24 BINABOX Partners", desc: "Ecosystem partnerships signed including wallets, DeFi protocols, and launchpads." },
-            { state: "done", num: "04", title: "DAO Governance", desc: "On-chain voting launched. First community treasury proposal passed with 78% approval." },
-        ],
-    },
-    {
-        id: "phase3",
-        num: "03",
-        label: "EXPANSION",
-        status: "active",
-        date: "Q1 – Q3 · 2024",
-        completion: 55,
-        desc: "The colony expands its reach. Cross-chain migration, luxury brand collaborations, and the first real-world NFTAlien activations are underway.",
-        missions: [
-            { state: "done", num: "01", title: "Cross-Chain Bridge", desc: "ETH ↔ Polygon bridge live. Holders can move assets across chains with zero fees." },
-            { state: "done", num: "02", title: "Luxury Collab #1", desc: "First luxury fashion house partnership signed. Limited co-branded drop in production." },
-            { state: "active", num: "03", title: "3D Avatar System", desc: "Interactive 3D versions of each alien being rendered. VRM file exports for metaverse use." },
-            { state: "active", num: "04", title: "IRL Event — NYC", desc: "First physical holder event planned in New York. Exclusive access for top 500 holders." },
-        ],
-    },
-    {
-        id: "phase4",
-        num: "04",
-        label: "DOMINION",
-        status: "locked",
-        date: "Q4 · 2024 — BEYOND",
-        completion: 0,
-        desc: "The final mission phase. Details are locked pending Phase 03 completion. Holders who complete all prior missions will receive early access to classified information.",
-        missions: [
-            { state: "locked", num: "01", title: "Project Nebula", desc: "A new collection expansion introducing rare legendary-tier aliens with unique utility perks." },
-            { state: "locked", num: "02", title: "AlienVerse Platform", desc: "Dedicated metaverse platform built exclusively for NFTAlien holders and their 3D avatars." },
-            { state: "locked", num: "03", title: "Global IRL Tour", desc: "Multi-city holder events across 5 continents. Physical alien art installations." },
-            { state: "locked", num: "04", title: "Token Exchange Listing", desc: "$ALIEN token listed on tier-1 centralised exchanges. Liquidity pools expanded." },
-        ],
-    },
-];
 
 function StatusBadge({ status }) {
     if (status === "complete")
@@ -139,25 +78,17 @@ function MissionItem({ mission }) {
 
     return (
         <div className="group relative flex flex-col h-full bg-[#0f0f0f] border border-[#1a1a1a] rounded-[4px] overflow-hidden pl-12 pr-10 py-5 transition-colors duration-200 hover:border-[rgba(0,255,136,0.3)]">
-            {/* left accent bar */}
             <span className="absolute left-0 top-0 bottom-0 w-[3px]" style={{ background: accentColor }} />
-
-            {/* item number */}
             <span className="absolute left-4 top-5 font-mono text-[0.6rem] text-[rgba(255,255,255,0.2)] tracking-wide">
                 {num}
             </span>
-
             <MissionCheck state={state} />
-
-            {/* title */}
             <div
                 className="font-['Barlow_Condensed'] font-bold text-[1rem] uppercase tracking-wide mb-2 leading-tight"
                 style={{ color: titleColor }}
             >
                 {title}
             </div>
-
-            {/* description */}
             {state === "locked" ? (
                 <div className="flex-1 overflow-hidden" style={{ margin: "0 -2px", padding: "0 2px" }}>
                     <p
@@ -184,8 +115,6 @@ function Phase({ phase, isEven }) {
 
     return (
         <div id={id} className="relative py-24 border-b border-[#1a1a1a] last:border-b-0">
-
-            {/* ghost number */}
             <div
                 className={cx(
                     "absolute font-['Barlow_Condensed'] font-black leading-none select-none pointer-events-none top-1/2 -translate-y-1/2 text-[rgba(255,255,255,0.012)]",
@@ -196,7 +125,6 @@ function Phase({ phase, isEven }) {
                 {num}
             </div>
 
-            {/* layout grid */}
             <div
                 className={cx(
                     "relative z-10 grid items-start gap-16",
@@ -230,14 +158,12 @@ function Phase({ phase, isEven }) {
 
                 {/* BODY */}
                 <div className={cx(isEven ? "lg:order-1" : "lg:order-2")}>
-
                     <p className={cx(
                         "text-base leading-[1.8] mb-10",
                         status === "locked" ? "text-white/25" : "text-white/85"
                     )}>
                         {desc}
                     </p>
-
                     <div
                         className="grid grid-cols-1 sm:grid-cols-2 gap-4"
                         style={{ gridAutoRows: "1fr" }}
@@ -252,9 +178,75 @@ function Phase({ phase, isEven }) {
     );
 }
 
+
+const phases = [
+    {
+        id: "phase1",
+        num: "01",
+        label: "GENESIS",
+        status: "complete",
+        date: "Q1 – Q2 · 2023",
+        completion: 100,
+        desc: "The origin mission. From concept to code — establishing the foundation of the NFTAlien universe. Smart contracts deployed, art generated, the colony founded.",
+        missions: [
+            { state: "done", num: "01", title: "Smart Contract Deployment", desc: "ERC-721A contract audited and deployed on Ethereum mainnet with gas optimisation." },
+            { state: "done", num: "02", title: "2525 Aliens Minted", desc: "Full collection minted and revealed. All traits randomised on-chain via Chainlink VRF." },
+            { state: "done", num: "03", title: "Whitelist Program", desc: "1000+ wallets whitelisted. Oversubscribed within 48 hours of announcement." },
+            { state: "done", num: "04", title: "Discord Colony Launch", desc: "Community of 10,000+ holders assembled across Discord and Twitter in 30 days." },
+        ],
+    },
+    {
+        id: "phase2",
+        num: "02",
+        label: "COLONY",
+        status: "complete",
+        date: "Q3 – Q4 · 2023",
+        completion: 100,
+        desc: "Building the infrastructure of the colony. Staking, token rewards, and the first wave of luxury brand partnerships that set NFTAlien apart from every other project.",
+        missions: [
+            { state: "done", num: "01", title: "$ALIEN Token Launch", desc: "Native utility token deployed. Staking pools opened for all 2525 holders." },
+            { state: "done", num: "02", title: "Merch Drop #1", desc: "Exclusive physical merchandise unlocked for top-tier holders. Sold out in 6 hours." },
+            { state: "done", num: "03", title: "24 BINABOX Partners", desc: "Ecosystem partnerships signed including wallets, DeFi protocols, and launchpads." },
+            { state: "done", num: "04", title: "DAO Governance", desc: "On-chain voting launched. First community treasury proposal passed with 78% approval." },
+        ],
+    },
+    {
+        id: "phase3",
+        num: "03",
+        label: "EXPANSION",
+        status: "active",
+        date: "Q1 – Q3 · 2024",
+        completion: 55,
+        desc: "The colony expands its reach. Cross-chain migration, luxury brand collaborations, and the first real-world NFTAlien activations are underway.",
+        missions: [
+            { state: "done", num: "01", title: "Cross-Chain Bridge", desc: "ETH ↔ Polygon bridge live. Holders can move assets across chains with zero fees." },
+            { state: "done", num: "02", title: "Luxury Collab #1", desc: "First luxury fashion house partnership signed. Limited co-branded drop in production." },
+            { state: "active", num: "03", title: "3D Avatar System", desc: "Interactive 3D versions of each alien being rendered. VRM file exports for metaverse use." },
+            { state: "active", num: "04", title: "IRL Event — NYC", desc: "First physical holder event planned in New York. Exclusive access for top 500 holders." },
+        ],
+    },
+    {
+        id: "phase4",
+        num: "04",
+        label: "DOMINION",
+        status: "locked",
+        date: "Q4 · 2024 — BEYOND",
+        completion: 0,
+        desc: "The final mission phase. Details are locked pending Phase 03 completion. Holders who complete all prior missions will receive early access to classified information.",
+        missions: [
+            { state: "locked", num: "01", title: "Project Nebula", desc: "A new collection expansion introducing rare legendary-tier aliens with unique utility perks." },
+            { state: "locked", num: "02", title: "AlienVerse Platform", desc: "Dedicated metaverse platform built exclusively for NFTAlien holders and their 3D avatars." },
+            { state: "locked", num: "03", title: "Global IRL Tour", desc: "Multi-city holder events across 5 continents. Physical alien art installations." },
+            { state: "locked", num: "04", title: "Token Exchange Listing", desc: "$ALIEN token listed on tier-1 centralised exchanges. Liquidity pools expanded." },
+        ],
+    },
+];
+
+
 export default function NFTAlienRoadmap() {
     return (
         <>
+            <Header />
             <main className="bg-[#080808] overflow-x-hidden" style={{ fontFamily: "'Barlow', sans-serif" }}>
 
                 {/* scanline overlay */}
@@ -350,8 +342,7 @@ export default function NFTAlienRoadmap() {
                     ))}
                 </div>
             </main>
-
-
+            <Footer />
         </>
     );
 }
