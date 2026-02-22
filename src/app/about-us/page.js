@@ -58,9 +58,7 @@ export default function AboutPage() {
                 <div className="absolute inset-0 hero-grid" />
                 <div className="absolute inset-0 hero-glow" />
                 <div className="afu relative z-10 text-center max-w-3xl px-5">
-                    <div className="agp inline-block border border-[rgba(0,255,136,0.35)] bg-[rgba(0,255,136,0.06)] text-[#00FF88] text-sm font-semibold tracking-[3px] uppercase px-5 py-1.5 rounded-full mb-7">
-                        WHO WE ARE
-                    </div>
+                   
                     <h1 className="fc font-extrabold uppercase leading-none tracking-wide mb-6 text-[clamp(3rem,8vw,6rem)]">
                         ABOUT <span className="text-[#00FF88]">NFTALIEN</span><br />UNIVERSE
                     </h1>
