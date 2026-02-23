@@ -60,7 +60,7 @@ export default function AboutPage() {
                 <div className="afu relative z-10 text-center max-w-3xl px-5">
                    
                     <h1 className="fc font-extrabold uppercase leading-none tracking-wide mb-6 text-[clamp(3rem,8vw,6rem)]">
-                        ABOUT <span className="text-[#00FF88]">NFTALIEN</span><br />UNIVERSE
+                        ABOUT <span className="text-[#00FF88]">ALIENNFT</span><br />UNIVERSE
                     </h1>
                     <p className="text-white/70 text-base leading-relaxed max-w-lg mx-auto mb-10">
                         We are a team of visionary creators, blockchain architects, and digital artists building the most fashionable alien civilisation on the ETH blockchain.
