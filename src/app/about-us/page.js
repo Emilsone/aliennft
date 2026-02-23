@@ -147,7 +147,7 @@ export default function AboutPage() {
 
 
             <section className="py-24 px-10 max-w-[1200px] mx-auto text-center font-[family-name:var(--font-geist-sans)]">
-                <p className="fc text-sm tracking-[4px] uppercase text-[#00FF88] font-semibold mb-3">WHAT WE STAND FOR</p>
+             
                 <h2 className="fc font-extrabold uppercase tracking-wide leading-tight text-[clamp(2rem,4vw,3rem)]">
                     OUR <span className="text-[#00FF88]">CORE VALUES</span>
                 </h2>
@@ -169,9 +169,8 @@ export default function AboutPage() {
             {divider}
 
 
-            <section className="py-24 px-10 max-w-[1200px] mx-auto font-[family-name:var(--font-geist-sans)]">
+            <section className="py-22 px-10 max-w-[1200px] mx-auto font-[family-name:var(--font-geist-sans)]">
                 <div className="text-center mb-12">
-                    <p className="fc text-sm tracking-[4px] uppercase text-[#00FF88] font-semibold mb-3">HOW WE GOT HERE</p>
                     <h2 className="fc font-extrabold uppercase tracking-wide leading-tight text-[clamp(2rem,4vw,3rem)]">
                         OUR <span className="text-[#00FF88]">STORY</span>
                     </h2>

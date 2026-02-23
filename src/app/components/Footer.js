@@ -1,4 +1,4 @@
-
+import Link from "next/link";
 import Image from 'next/image';
 export default function Footer() {
   return (
@@ -8,11 +8,11 @@ export default function Footer() {
           <Image src="/alienlogo.svg" alt="AlienNFT Logo" width={170} height={120} className="h-10 w-auto" />
         </div>
         <nav className="flex flex-col md:flex-row flex-wrap items-center  justify-center gap-x-12 gap-y-3 text-white/85 font-semibold hover:text-white no-underline uppercase" aria-label="Footer">
-          <a href="#" className="">Home</a>
-          <a href="#" className="">About</a>
-          <a href="#" className="">Blog</a>
-          <a href="#" className="">Privacy Policy</a>
-          <a href="#" className="">Contact</a>
+          <Link href="/" className="">Home</Link>
+          <Link href="/about-us" className="">About</Link>
+          <Link href="/blog" className="">Blog</Link>
+          <Link href="/privacy-policy" className="">Privacy Policy</Link>
+          <Link href="/blog" className="">Contact</Link>
         </nav>
         <p className="text-center pt-8 capitalize">&copy; {new Date().getFullYear()} AlienNFT  All rights reserved.</p>
 
