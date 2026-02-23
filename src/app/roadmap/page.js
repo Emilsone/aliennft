@@ -6,8 +6,6 @@ import Footer from '../components/Footer';
 function cx(...classes) {
     return classes.filter(Boolean).join(" ");
 }
-
-
 function StatusBadge({ status }) {
     if (status === "complete")
         return (
@@ -133,7 +131,7 @@ function Phase({ phase, isEven }) {
                         : "grid-cols-1 lg:grid-cols-[260px_1fr]"
                 )}
             >
-                {/* SIDEBAR */}
+
                 <div className={cx("lg:sticky lg:top-20", isEven ? "lg:order-2" : "lg:order-1")}>
                     <div className="font-mono text-[0.65rem] text-[rgba(255,255,255,0.3)] tracking-[2px] uppercase mb-2">
                         MISSION PHASE
@@ -156,7 +154,7 @@ function Phase({ phase, isEven }) {
                     )}
                 </div>
 
-                {/* BODY */}
+
                 <div className={cx(isEven ? "lg:order-1" : "lg:order-2")}>
                     <p className={cx(
                         "text-base leading-[1.8] mb-10",
@@ -177,7 +175,6 @@ function Phase({ phase, isEven }) {
         </div>
     );
 }
-
 
 const phases = [
     {
@@ -248,8 +245,6 @@ export default function NFTAlienRoadmap() {
         <>
             <Header />
             <main className="bg-[#080808] overflow-x-hidden" style={{ fontFamily: "'Barlow', sans-serif" }}>
-
-                {/* scanline overlay */}
                 <div
                     className="fixed inset-0 z-0 pointer-events-none"
                     style={{
@@ -257,7 +252,6 @@ export default function NFTAlienRoadmap() {
                             "repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.03) 2px,rgba(0,0,0,0.03) 4px)",
                     }}
                 />
-
                 {/* ── HERO ── */}
                 <section className="relative min-h-screen flex items-center px-6 md:px-[60px] pt-[120px] pb-20 overflow-hidden">
                     <div
@@ -304,7 +298,7 @@ export default function NFTAlienRoadmap() {
                     </div>
                 </section>
 
-                {/* ── STICKY NAV ── */}
+          
                 <nav
                     className="sticky top-0 z-50 border-b border-[#1a1a1a] flex items-stretch h-14 overflow-x-auto"
                     style={{ background: "rgba(8,8,8,0.95)", backdropFilter: "blur(12px)", scrollbarWidth: "none" }}
@@ -335,7 +329,6 @@ export default function NFTAlienRoadmap() {
                     ))}
                 </nav>
 
-                {/* ── PHASES ── */}
                 <div className="px-6 md:px-[60px] pb-[120px] max-w-[1400px] mx-auto">
                     {phases.map((phase, i) => (
                         <Phase key={phase.id} phase={phase} isEven={i % 2 !== 0} />

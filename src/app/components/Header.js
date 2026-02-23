@@ -24,7 +24,7 @@ export default function Header() {
                         <Image src="/alienlogo.svg" alt="BetaRate Logo" width={170} height={120} className="h-10 w-auto" />
                     </div>
 
-                    {/* Desktop Menu */}
+                    {/* Desktop menu button code section */}
                     <nav className="hidden md:flex items-center w-full">
                 
                         <div className="flex space-x-4 justify-center flex-2 uppercase">
@@ -52,7 +52,7 @@ export default function Header() {
                             </a>
                         </div>
                     </nav>
-                    {/* Mobile Menu Button */}
+               
                     <div className="md:hidden flex items-center">
                         <button
                             onClick={() => setMenuOpen(!menuOpen)}
@@ -69,7 +69,7 @@ export default function Header() {
                     </div>
                 </div>
             </div>
-            {/* Mobile Menu code section */}
+            {/* Mobile menu code section */}
             {menuOpen && (
                 <nav className="md:hidden bg-[#000000] dark:bg-gray-900 px-4 pt-2 pb-4 space-y-2">
                 

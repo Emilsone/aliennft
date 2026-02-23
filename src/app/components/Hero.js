@@ -2,7 +2,7 @@ export default function Home() {
     return (
         <main className="relative h-screen w-full overflow-hidden bg-black ">
 
-            {/* Background Image */}
+        
             <div
                 className="absolute inset-0 bg-cover bg-center bg-no-repeat"
                 style={{
@@ -11,7 +11,7 @@ export default function Home() {
                 }}
             />
 
-            {/* Dark Gradient Overlay */}
+          
             <div
                 className="
           absolute inset-0 
@@ -21,7 +21,7 @@ export default function Home() {
         "
             />
 
-            {/* Content Wrapper */}
+    
             <div className="
         relative z-10 flex h-full justify-center text-center 
         items-start md:items-end
@@ -31,7 +31,7 @@ export default function Home() {
       ">
                 <div className="max-w-[1000px] w-full">
 
-                    {/* Heading */}
+    
                     <h1 className="
             text-[38px] md:text-[64px]
             font-extrabold tracking-[2px] text-white/85 
@@ -41,7 +41,7 @@ export default function Home() {
                         EXPLORE NFT COLLECTION
                     </h1>
 
-                    {/* Paragraph */}
+            
                     <p className="
             text-[16px] md:text-[18px]
             text-gray-300 leading-relaxed 
@@ -53,7 +53,7 @@ export default function Home() {
                         metaverse-ready, and designed to benefit their holders.
                     </p>
 
-                    {/* Buttons */}
+        
                     <div className="
             flex flex-col md:flex-row
             items-center justify-center

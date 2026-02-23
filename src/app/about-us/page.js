@@ -29,24 +29,22 @@ export default function AboutPage() {
         { number: '03', icon: '🎨', title: 'Artistic Excellence', desc: '2525 hand-crafted 3D characters. No lazy generation. Every trait, every accessory, designed with obsessive detail.' },
         { number: '04', icon: '👥', title: 'Community Power', desc: 'Holders vote on treasury allocation, collaboration partners, and collection expansions. This universe belongs to everyone.' },
         { number: '05', icon: '🔐', title: 'Security First', desc: 'Audited smart contracts. Multi-sig treasury. Regular security reviews. Your assets are our priority.' },
-        { number: '06', icon: '🚀', title: 'Long-Term Vision', desc: "We're building for the next decade, not the next pump. Sustainable tokenomics, real partnerships, lasting value." },
+        { number: '06', icon: '🚀', title: 'Long-Term Vision', desc: "We are building for the next decade, not the next pump. Real partnerships, lasting value." },
     ]
 
     const timeline = [
         { dot: 'Q1', year: '2022 — GENESIS', title: 'The Concept Is Born', desc: 'David and the founding team begin conceptualising a utility-first NFT collection bridging high fashion and blockchain. Early sketches of the alien characters are created.' },
         { dot: 'Q3', year: '2022 — FORMATION', title: 'Team Assembly & Art Production', desc: 'World-class 3D artists join the project. Over 200 unique traits designed and rendered. Smart contract architecture finalised with third-party security audit.' },
-        { dot: 'Q1', year: '2023 — LAUNCH', title: 'NFTAlien Goes Live', desc: '2525 aliens minted on Ethereum. Whitelist fully subscribed within 48 hours. Community of 10,000+ Discord members formed organically.' },
+        { dot: 'Q1', year: '2023 — LAUNCH', title: 'AlienNFT  Goes Live', desc: '2525 aliens minted on Ethereum. Whitelist fully subscribed within 48 hours. Community of 10,000+ Discord members formed organically.' },
         { dot: 'Q4', year: '2023 — EXPANSION', title: 'Partnerships & Staking Launch', desc: 'Interstellar token staking goes live. First luxury brand collaboration announced. BINABOX program grows to 24+ ecosystem partners.' },
         { dot: 'NOW', year: '2024 — FUTURE', title: 'The Alien-verse Continues', desc: 'Phase 2 collection in development. Metaverse integration on the horizon. The colony grows stronger every day.' },
     ]
-
     const partners = [
         // '⬡ NEAR', '🔶 Binance Chain', 'Coinbase Wallet', '◈ Zerion', '⚡ Zapper',
         // '📱 InstaApp', '∆ AToken', '🛡 Trust Wallet', '🎁 Giving Block', 'V Venly',
         // '⬡ Pillar', '📡 DappRadar', '◎ SYNTHETIX', '⬛ UNSTOPPABLE', '📺 Live Coin Watch',
         // '₿ bitpay', '🔷 Huobi Wallet',
     ]
-
     const socials = ['𝕏', 'in', '🔗']
     const divider = <div className="w-full h-px divider-bg" />
 
@@ -58,7 +56,7 @@ export default function AboutPage() {
                 <div className="absolute inset-0 hero-grid" />
                 <div className="absolute inset-0 hero-glow" />
                 <div className="afu relative z-10 text-center max-w-3xl px-5">
-                   
+
                     <h1 className="fc font-extrabold uppercase leading-none tracking-wide mb-6 text-[clamp(3rem,8vw,6rem)]">
                         ABOUT <span className="text-[#00FF88]">ALIENNFT</span><br />UNIVERSE
                     </h1>
@@ -81,7 +79,7 @@ export default function AboutPage() {
                             BUILDING THE<br /><span className="text-[#00FF88]">ALIEN-VERSE</span>
                         </h2>
                         <p className="text-white/70 text-base leading-relaxed mt-4 max-w-lg">
-                            NFTAlien was born from a simple idea — that digital collectibles should offer real, tangible benefits to their holders. Not just art. Not just bragging rights. A complete ecosystem.
+                            AlienNFT  was born from a simple idea, that digital collectibles should offer real, tangible benefits to their holders. Not just art. Not just bragging rights. A complete ecosystem.
                         </p>
                         <p className="text-white/70 text-base leading-relaxed mt-3 max-w-lg">
                             Every alien in our collection is a passport to an expanding universe of utilities, exclusive merchandise, token rewards, and luxury brand collaborations.
@@ -148,13 +146,13 @@ export default function AboutPage() {
             {divider}
 
 
-            <section className="py-24 px-10 max-w-[1200px] mx-auto text-center">
+            <section className="py-24 px-10 max-w-[1200px] mx-auto text-center font-[family-name:var(--font-geist-sans)]">
                 <p className="fc text-sm tracking-[4px] uppercase text-[#00FF88] font-semibold mb-3">WHAT WE STAND FOR</p>
                 <h2 className="fc font-extrabold uppercase tracking-wide leading-tight text-[clamp(2rem,4vw,3rem)]">
                     OUR <span className="text-[#00FF88]">CORE VALUES</span>
                 </h2>
                 <p className="text-white/70 text-base leading-relaxed mt-3 max-w-lg mx-auto">
-                    Every decision in the NFTAlien universe is guided by these principles.
+                    Every decision in the AlienNFT  universe is guided by these principles.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 text-left">
                     {values.map((v) => (
@@ -171,7 +169,7 @@ export default function AboutPage() {
             {divider}
 
 
-            <section className="py-24 px-10 max-w-[1200px] mx-auto">
+            <section className="py-24 px-10 max-w-[1200px] mx-auto font-[family-name:var(--font-geist-sans)]">
                 <div className="text-center mb-12">
                     <p className="fc text-sm tracking-[4px] uppercase text-[#00FF88] font-semibold mb-3">HOW WE GOT HERE</p>
                     <h2 className="fc font-extrabold uppercase tracking-wide leading-tight text-[clamp(2rem,4vw,3rem)]">
@@ -194,8 +192,6 @@ export default function AboutPage() {
                     ))}
                 </div>
             </section>
-
-
             {/* <div className="bg-[#0d0d0d] border-t border-b border-[#1e1e1e] py-16 px-10">
                 <h2 className="fc font-extrabold text-3xl uppercase tracking-widest text-center mb-10">
                     <span className="text-[#00FF88]">BINABOX</span> PARTNER
@@ -206,9 +202,6 @@ export default function AboutPage() {
                     ))}
                 </div>
             </div> */}
-
-
-
             <Footer />
         </main>
     )
