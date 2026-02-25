@@ -61,7 +61,6 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -70,6 +69,9 @@ body {
   font-family: 'Barlow Condensed', sans-serif;
 }
 
+.pc{
+  font-family: 'Geist', sans-serif;
+}
 
 
 @keyframes fadeUp {
@@ -246,3 +248,22 @@ body {
 nav::-webkit-scrollbar {
   display: none;
 }
+@keyframes badgeSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.hero-grid {
+  background-image:
+      linear-gradient(rgba(0,255,136,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,255,136,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+.hero-glow {
+  background: radial-gradient(ellipse 60% 50% at 30% 50%, rgba(0,255,136,0.08) 0%, transparent 70%);
+}
+@keyframes badgeSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.badge-spin { animation: badgeSpin 14s linear infinite; }

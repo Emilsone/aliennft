@@ -1,5 +1,7 @@
 import Header from '../components/Header';
+import AboutHero from '../components/AboutHero';
 import Footer from '../components/Footer';
+
 import Image from 'next/image'
 
 export default function AboutPage() {
@@ -52,22 +54,8 @@ export default function AboutPage() {
         <main className="bg-[#0a0a0a] text-white/80 overflow-x-hidden font-[family-name:var(--font-geist-sans)]">
             <Header />
 
-            <section className="hero-bg min-h-screen flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 hero-grid" />
-                <div className="absolute inset-0 hero-glow" />
-                <div className="afu relative z-10 text-center max-w-3xl px-5">
-
-                    <h1 className="fc font-extrabold uppercase leading-none tracking-wide mb-6 text-[clamp(3rem,8vw,6rem)]">
-                        ABOUT <span className="text-[#00FF88]">ALIENNFT</span><br />UNIVERSE
-                    </h1>
-                    <p className="text-white/70 text-base leading-relaxed max-w-lg mx-auto mb-10">
-                        We are a team of visionary creators, blockchain architects, and digital artists building the most fashionable alien civilisation on the ETH blockchain.
-                    </p>
-                    <div className="flex gap-4 justify-center flex-wrap">
-                        <button className="bp">JOIN THE COLONY</button>
-                        <button className="bo">VIEW COLLECTION</button>
-                    </div>
-                </div>
+            <section className="lg:px-14 my-12">
+                <AboutHero />
             </section>
 
 
