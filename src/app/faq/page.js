@@ -1,4 +1,6 @@
 'use client'
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 import { useState, useEffect, useRef } from 'react'
 
@@ -130,33 +132,29 @@ export default function FAQPage() {
     return (
         <main className="bg-[#080808] text-white overflow-x-hidden min-h-screen">
 
-            {/* scanline */}
+            <Header />
+
+
             <div className="fixed inset-0 pointer-events-none z-0" style={{ backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.025) 2px, rgba(0,0,0,0.025) 4px)' }} />
 
-            {/* ── HERO ── */}
-            <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-6">
 
-                {/* deep space bg */}
+            <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-6">
                 <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 80% 60% at 50% 50%, #001508 0%, #080808 65%)' }} />
 
-                {/* rotating rings */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-[rgba(0,255,136,0.06)] animate-[spin_40s_linear_infinite]" />
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[420px] h-[420px] rounded-full border border-[rgba(0,255,136,0.04)] animate-[spin_25s_linear_infinite_reverse]" />
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[240px] h-[240px] rounded-full border border-[rgba(0,255,136,0.08)] animate-[spin_15s_linear_infinite]" />
 
-                {/* corner brackets */}
                 <div className="absolute top-8 left-8 w-10 h-10 border-t-2 border-l-2 border-[rgba(0,255,136,0.4)]" />
                 <div className="absolute top-8 right-8 w-10 h-10 border-t-2 border-r-2 border-[rgba(0,255,136,0.4)]" />
                 <div className="absolute bottom-8 left-8 w-10 h-10 border-b-2 border-l-2 border-[rgba(0,255,136,0.4)]" />
                 <div className="absolute bottom-8 right-8 w-10 h-10 border-b-2 border-r-2 border-[rgba(0,255,136,0.4)]" />
 
-                {/* signal bars left */}
                 <div className="absolute left-8 top-1/2 -translate-y-1/2 flex flex-col gap-1.5">
                     {[40, 60, 80, 100, 80, 60, 40].map((h, i) => (
                         <div key={i} className="w-1 rounded-full bg-[#00FF88] animate-pulse" style={{ height: `${h * 0.3}px`, opacity: h / 100 * 0.6, animationDelay: `${i * 0.1}s` }} />
                     ))}
                 </div>
-                {/* signal bars right */}
                 <div className="absolute right-8 top-1/2 -translate-y-1/2 flex flex-col gap-1.5">
                     {[40, 60, 80, 100, 80, 60, 40].map((h, i) => (
                         <div key={i} className="w-1 rounded-full bg-[#00FF88] animate-pulse" style={{ height: `${h * 0.3}px`, opacity: h / 100 * 0.6, animationDelay: `${i * 0.15}s` }} />
@@ -172,14 +170,12 @@ export default function FAQPage() {
                         {faqSub}
                     </div>
 
-                    {/* terminal prompt */}
                     <div className="inline-flex items-center bg-[rgba(0,255,136,0.05)] border border-[rgba(0,255,136,0.2)] rounded-sm px-5 py-3 mb-4">
                         <span className="text-[#00FF88]/60 font-mono text-sm mr-2">›</span>
                         <span className="font-mono text-sm text-white/80">WHAT DO YOU WANT TO KNOW?</span>
                         <span className={`ml-1 inline-block w-2 h-4 bg-[#00FF88] transition-opacity duration-100 ${cursorVisible ? 'opacity-100' : 'opacity-0'}`} />
                     </div>
 
-                    {/* scroll cue */}
                     <div className="font-mono text-[0.58rem] tracking-[3px] text-white/80 uppercase mt-6 flex items-center justify-center gap-3">
                         <div className="h-px w-12 bg-white/10" />
                         SCROLL TO EXPLORE
@@ -214,8 +210,6 @@ export default function FAQPage() {
                         </button>
                     ))}
                 </div>
-
-                {/* FAQ items */}
                 <div className="space-y-3">
                     {filtered.map((faq) => {
                         const isOpen = openItems[faq.id]
@@ -224,12 +218,12 @@ export default function FAQPage() {
                                 key={faq.id}
                                 className={`border rounded-sm overflow-hidden transition-all duration-300 ${isOpen ? 'border-[rgba(0,255,136,0.3)] bg-[rgba(0,255,136,0.03)]' : 'border-[#1a1a1a] bg-[#0f0f0f] hover:border-[#2a2a2a]'}`}
                             >
-                                {/* question row */}
+
                                 <button
                                     onClick={() => toggle(faq.id)}
                                     className="w-full text-left px-4 sm:px-6 py-4 sm:py-5 flex items-start gap-3 sm:gap-5 group"
                                 >
-                                    {/* number tag — desktop only */}
+
                                     <div className="flex-shrink-0 mt-0.5 hidden sm:block">
                                         <div className={`font-mono text-[0.85rem] tracking-[2px] uppercase px-2 py-1 rounded-sm border transition-colors duration-200 ${isOpen ? 'text-[#00FF88] border-[rgba(0,255,136,0.4)] bg-[rgba(0,255,136,0.1)]' : 'text-white/80 border-[#1a1a1a]/90'}`}>
                                             {faq.id}
@@ -237,9 +231,9 @@ export default function FAQPage() {
                                         <div className="font-mono text-[0.5rem] tracking-[1px] uppercase text-white/80 mt-1.5 text-center">{faq.category}</div>
                                     </div>
 
-                                    {/* question text */}
+
                                     <div className="flex-1 min-w-0">
-                                        {/* category shown inline on mobile */}
+
                                         <div className={`font-mono text-[0.8rem] tracking-[2px] uppercase mb-1.5 sm:hidden ${isOpen ? 'text-[#00FF88]/60' : 'text-white/80'}`}>
                                             {faq.category}
                                         </div>
@@ -248,13 +242,13 @@ export default function FAQPage() {
                                         </div>
                                     </div>
 
-                                    {/* toggle button */}
+
                                     <div className={`flex-shrink-0 mt-0.5 font-mono text-[0.52rem] sm:text-[0.58rem] tracking-[1px] sm:tracking-[2px] uppercase border px-2 sm:px-3 py-1.5 rounded-sm transition-all duration-200 whitespace-nowrap ${isOpen ? 'text-black bg-[#00FF88] border-[#00FF88]' : 'text-white/80 border-[#1a1a1a] group-hover:border-[rgba(0,255,136,0.3)] group-hover:text-white/50'}`}>
                                         {isOpen ? '[ CLOSE ]' : '[ OPEN ]'}
                                     </div>
                                 </button>
 
-                                {/* answer */}
+
                                 {isOpen && (
                                     <div className="px-4 sm:px-6 pb-5 sm:pb-6 sm:pl-[88px]">
                                         <p className="text-white/60 text-sm sm:text-base leading-relaxed">
@@ -287,6 +281,7 @@ export default function FAQPage() {
                     </div>
                 </div>
             </section>
+            <Footer />
         </main>
     )
 }
