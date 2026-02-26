@@ -264,10 +264,10 @@ export default function NFTLanding() {
                 </main>
                 {/* moblie menu code section */}
                 <main className="flex lg:hidden relative z-10 flex-col items-center w-full max-w-[600px] mx-auto px-6 pt-14 pb-16 gap-10">
-                    <div className="text-center w-full">
+                    <div className="text-center w-full ">
                         <h1
-                            className="text-white font-extrabold uppercase leading-[1.06] tracking-[-1.5px] mb-4"
-                            style={{ fontSize: "clamp(2.4rem, 10vw, 3.8rem)" }}
+                            className="text-white font-extrabold uppercase leading-[1.06]  mb-4 "
+                            style={{ fontSize: "clamp(3rem, 13vw, 6rem)" }}
                         >
                             ABOUT <span className="text-[#00FF88]">ALIENNFT</span><br />UNIVERSE
                         </h1>
