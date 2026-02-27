@@ -1,42 +1,78 @@
-import Image from 'next/image';
-export default function Newsletter() {
-    return (
-        <section className=" bg-[#000000]">
-            <div className=" py-8 sm:py-24 lg:py-32">
-                <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 lg:grid-cols-12 lg:gap-8 lg:px-8">
-                    <div className="max-w-xl text-3xl tracking-tight text-white/85  sm:text-4xl lg:col-span-7">
-                        <h2 className="inline sm:block lg:inline xl:block font-bold capitalize">Want product news and updates?</h2>
-                        <p className="inline sm:block lg:inline xl:block text-lg  py-2">Sign up for our newsletter.</p>
-                    </div>
-                    <form className="w-full max-w-md lg:col-span-5 lg:pt-2">
-                        <div className="flex gap-x-4">
-                            <label htmlFor="email-address" className="sr-only">Email address</label>
-                            <input
-                                id="email-address"
-                                name="email"
-                                type="email"
-                                autoComplete="email"
-                                required
-                                className="min-w-0 flex-auto  border-0 bg-white/10 px-3.5 py-3 text-white/85  shadow-sm ring-1  placeholder:text-white    sm:text-sm sm:leading-6"
-                                placeholder="Enter your email"
-                            />
-                            <button
-                                type="submit"
-                                className="flex-none  bg-[#21E786] px-3.5  text-sm font-semibold text-[#000000] shadow-sm hover:bg-[#21E786] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#21E786]"
-                            >
-                                Subscribe
-                            </button>
-                        </div>
-                        <p className="mt-4 text-sm leading-6 text-gray-300">
-                            We care about your data. Read our{" "}
-                            <a href="#" className="font-semibold text-[#21E786]">
-                                privacy&nbsp;policy
-                            </a>.
-                        </p>
-                    </form>
-                </div>
-            </div>
+"use client";
 
-        </section>
+import { useState } from "react";
+
+export default function NewsletterSubscribe() {
+    const [email, setEmail] = useState("");
+    const [submitted, setSubmitted] = useState(false);
+
+    const handleSubmit = () => {
+        if (email) setSubmitted(true);
+    };
+
+    return (
+        <div className="min-h-[400px] flex items-center justify-center bg-[#000000]">
+            <div className="bg-[rgba(0,255,136,0.04)] border border-[rgba(0,255,136,0.15)] rounded-sm px-14 pt-12 pb-10 w-full max-w-[1100px] mx-6">
+
+                {/* Heading */}
+                <h2 className="text-white text-[22px] font-normal text-center mb-7 tracking-[0.01em] font-serif">
+                    Subscribe for weekly updates on art and culture
+                </h2>
+
+                {/* Input Row */}
+                <div className="flex items-center bg-[#2e2e2e] rounded-full pl-5 pr-1.5 py-1.5 gap-2">
+                    <input
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        onKeyDown={(e) => e.key === "Enter" && handleSubmit()}
+                        placeholder="Enter your email..."
+                        className="flex-1 bg-transparent border-none outline-none text-[#999999] text-[15px] font-serif placeholder-[#999999] caret-white"
+                    />
+                    <button
+                        onClick={handleSubmit}
+                        className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 transition-colors duration-200 cursor-pointer border-none ${submitted ? "bg-[#555555]" : "bg-white"
+                            }`}
+                    >
+                        {submitted ? (
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path
+                                    d="M3 8l4 4 6-6"
+                                    stroke="#fff"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                />
+                            </svg>
+                        ) : (
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path
+                                    d="M3 8h10M9 4l4 4-4 4"
+                                    stroke="#1a1a1a"
+                                    strokeWidth="1.8"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                />
+                            </svg>
+                        )}
+                    </button>
+                </div>
+
+                <p className="text-[#666666] text-[11.5px] text-center leading-relaxed py-4">
+                    By subscribing you agree to{" "}
+                    <a href="#" className="text-[#888888] underline hover:text-[#aaaaaa] transition-colors">
+                        Terms of Use
+                    </a>
+                    ,{" "}
+                    <a href="#" className="text-[#888888] underline hover:text-[#aaaaaa] transition-colors">
+                        our Privacy Policy
+                    </a>{" "}
+                    and{" "}
+                    <a href="#" className="text-[#888888] underline hover:text-[#aaaaaa] transition-colors">
+                        our information collection notice
+                    </a>
+                </p>
+            </div>
+        </div>
     );
 }

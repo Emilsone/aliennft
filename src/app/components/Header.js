@@ -22,7 +22,9 @@ export default function Header() {
                 <div className="flex justify-between items-center h-20">
 
                     <div className="flex-shrink-0 flex items-center ">
-                        <Image src="/alienlogo.svg" alt="BetaRate Logo" width={170} height={120} className="h-10 w-auto" />
+                        <Link href="/">
+                            <Image src="/alienlogo.svg" alt="BetaRate Logo" width={170} height={120} className="h-10 w-auto" />
+                        </Link>
                     </div>
 
                     {/* Desktop menu button code section */}
@@ -48,7 +50,7 @@ export default function Header() {
                                 <Image src="/discord-icon.svg" alt="BetaRate Logo" width={90} height={90} className="h-6 w-auto" />
                                 <span>Discord</span>
                             </a>
-                            <a href="#" className="bg-[#21E786] text-[#000000] px-6 py-2.5 transition uppercase flex space-x-2 items-center font-bold">
+                            <a href="#" className="bg-[#00FF88] text-[#000000] px-6 py-2.5 transition uppercase flex space-x-2 items-center font-bold">
                                 <Image src="/wallet-icon.svg" alt="BetaRate Logo" width={90} height={90} className="h-6 w-auto" />
                                 <span>Connect</span>
                             </a>
@@ -97,7 +99,7 @@ export default function Header() {
                             <span>Discord</span>
                         </a>
 
-                        <a href="#" className="bg-green-500 text-white px-4 py-1 rounded-md hover:bg-green-600 transition disabled">Connect</a>
+                        <a href="#" className="bg-[#00FF88] text-white px-4 py-1 rounded-md hover:bg-green-600 transition disabled">Connect</a>
                     </div>
                 </nav>
             )}

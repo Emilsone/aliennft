@@ -251,7 +251,7 @@ export default function FAQPage() {
 
                                 {isOpen && (
                                     <div className="px-4 sm:px-6 pb-5 sm:pb-6 sm:pl-[88px]">
-                                        <p className="text-white/60 text-sm sm:text-base leading-relaxed">
+                                        <p className="text-white/80 text-sm sm:text-[13.5px] leading-relaxed">
                                             {faq.answer}
                                         </p>
                                     </div>
@@ -260,7 +260,6 @@ export default function FAQPage() {
                         )
                     })}
                 </div>
-
                 <div className="mt-12 sm:mt-20 border border-[#1a1a1a] rounded-sm p-6 sm:p-8 bg-[#0f0f0f]">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
                         <div className="flex-1">
@@ -271,7 +270,7 @@ export default function FAQPage() {
                                 Still have questions?
                             </div>
                             <p className="text-white/80 text-sm mt-1 leading-relaxed">
-                                Open a support ticket in our Discord. The colony responds fast.
+                                Open a support ticket in our Discord. The colony responds fast. Or read our documentation
                             </p>
                         </div>
                         <div className="flex flex-col sm:flex-row gap-3 sm:flex-shrink-0">
