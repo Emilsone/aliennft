@@ -12,7 +12,7 @@ export default function NewsletterSubscribe() {
 
     return (
         <div className="min-h-[100px] flex items-center justify-center bg-[#000000]">
-            <div className="hero-bg border border-[rgba(0,255,136,0.15)] px-14 pt-12 pb-10 w-full max-w-[1200px]  mx-6">
+            <div className="hero-bg border border-[rgba(0,255,136,0.15)] px-14 pt-12 pb-10 w-full max-w-[1200px] mx-6 mb-24">
                 <h2 className="fi text-white text-[19px] sm:text-[20px] md:text-[24px] font-bold text-center mb-5 tracking-[0.01em]">
                     Subscribe for weekly updates on art and culture
                 </h2>
