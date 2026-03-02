@@ -114,10 +114,7 @@ export default function Footer() {
           <p className="text-[#666666] text-[14px] text-center md:text-left tracking-wide">
             &copy; {new Date().getFullYear()} AlienNFT. All rights reserved.
           </p>
-          <div className="flex gap-2">
-            <span className="w-2 h-2 rounded-full bg-[#00FF88] animate-pulse shadow-[0_0_10px_#00FF88]"></span>
-            <span className="text-[#666666] text-[12px] uppercase font-bold tracking-[0.2em]">Systems Online</span>
-          </div>
+         
         </div>
 
       </div>
