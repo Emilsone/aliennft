@@ -57,7 +57,7 @@ export default function Home() {
           ">
                         <button className="
               w-full md:w-auto
-              bg-[#14f195] text-black font-semibold 
+              bg-[#00FF88]  text-black font-semibold 
               text-[14px] tracking-[1px] 
               px-7 py-3
             ">

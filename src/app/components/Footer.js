@@ -14,15 +14,19 @@ export default function Footer() {
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-10 sm:gap-x-16 md:gap-x-20 gap-y-10">
-
             <div>
               <p className="text-[#aaaaaa] text-[15px] mb-5">Explore</p>
               <ul className="flex flex-col gap-4">
-                {["Roadmap", "Collection", "Alienmarket", "Resources"].map((item) => (
-                  <li key={item}>
-                    <a href="#" className="text-white text-[13px] hover:text-[#aaaaaa] transition-colors">
-                      {item}
-                    </a>
+                {[
+                  { label: "Roadmap", href: "/roadmap" },
+                  { label: "Collection", href: "/collection" },
+                  { label: "Alienmarket", href: "/alienmarket" },
+                  { label: "Resources", href: "/resources" },
+                ].map((item) => (
+                  <li key={item.label}>
+                    <Link href={item.href} className="text-white text-[13px] hover:text-[#aaaaaa] transition-colors">
+                      {item.label}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -31,10 +35,10 @@ export default function Footer() {
               <p className="text-[#aaaaaa] text-[15px] mb-5">Quick links</p>
               <ul className="flex flex-col gap-4">
                 {[
-                  { label: "About us", href: "/about" },
+                  { label: "About us", href: "/about-us" },
                   { label: "FAQ", href: "/faq" },
                   { label: "Contact us", href: "/contact" },
-                  { label: "Help Center", href: "/help" },
+                  { label: "Help Center", href: "/help-center" },
                 ].map((item) => (
                   <li key={item.label}>
                     <Link href={item.href} className="text-white text-[13px] hover:text-[#aaaaaa] transition-colors">
