@@ -51,7 +51,7 @@ export default function FAQ() {
                         return (
                             <div
                                 key={index}
-                                className={`group border rounded-xl overflow-hidden transition-all duration-300 ${isOpen ? 'bg-white/[0.04] border-[#00FF88]/40 shadow-[0_10px_30px_rgba(0,255,136,0.05)]' : 'bg-[#0a0a0a] border-white/10 hover:border-white/30'}`}
+                                className={`group border rounded-sm overflow-hidden transition-all duration-300 ${isOpen ? 'bg-white/[0.04] border-[#00FF88]/40 shadow-[0_10px_30px_rgba(0,255,136,0.05)]' : 'bg-[#0a0a0a] border-white/10 hover:border-white/30'}`}
                             >
                                 <button
                                     className="w-full text-left px-6 py-5 sm:px-8 sm:py-6 flex justify-between items-center focus:outline-none"

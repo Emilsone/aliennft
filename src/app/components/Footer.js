@@ -59,9 +59,9 @@ export default function Footer() {
               <ul className="flex flex-col gap-4">
                 {[
                   { label: "Roadmap", href: "/roadmap" },
-                  { label: "Collection", href: "/collection" },
-                  { label: "Alienmarket", href: "/alienmarket" },
-                  { label: "Resources", href: "/resources" },
+                  { label: "Collection", href: "/404" },
+                  { label: "Alienmarket", href: "/404" },
+                  { label: "Resources", href: "/404" },
                 ].map((item) => (
                   <li key={item.label}>
                     <Link href={item.href} className="group flex items-center text-[#aaaaaa] text-[14px] hover:text-white transition-colors duration-300">
@@ -78,8 +78,8 @@ export default function Footer() {
                 {[
                   { label: "About us", href: "/about-us" },
                   { label: "FAQ", href: "/faq" },
-                  { label: "Contact us", href: "/contact" },
-                  { label: "Help Center", href: "/help-center" },
+                  { label: "Contact us", href: "/404" },
+                  { label: "Help Center", href: "/404" },
                 ].map((item) => (
                   <li key={item.label}>
                     <Link href={item.href} className="group flex items-center text-[#aaaaaa] text-[14px] hover:text-white transition-colors duration-300">
@@ -94,9 +94,9 @@ export default function Footer() {
               <p className="text-white font-semibold text-[16px] mb-6 tracking-wide">Legal</p>
               <ul className="flex flex-col gap-4">
                 {[
-                  { label: "Terms of service", href: "/terms" },
+                  { label: "Terms of service", href: "/404" },
                   { label: "Privacy policy", href: "/privacy-policy" },
-                  { label: "Cookie policy", href: "/cookies" },
+                  { label: "Cookie policy", href: "/404" },
                 ].map((item) => (
                   <li key={item.label}>
                     <Link href={item.href} className="group flex items-center text-[#aaaaaa] text-[14px] hover:text-white transition-colors duration-300">
@@ -114,7 +114,7 @@ export default function Footer() {
           <p className="text-[#666666] text-[14px] text-center md:text-left tracking-wide">
             &copy; {new Date().getFullYear()} AlienNFT. All rights reserved.
           </p>
-         
+
         </div>
 
       </div>

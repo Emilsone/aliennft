@@ -29,7 +29,7 @@ export default function StorySection() {
                         }}
                     >
                         <h1
-                            className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/70"
+                            className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/60 "
                             style={{
                                 fontFamily: "'Arial Black', 'Helvetica Neue', Arial, sans-serif",
                                 fontWeight: 900,
@@ -62,11 +62,11 @@ export default function StorySection() {
                             <div className="flex gap-8 sm:gap-16 mb-8 sm:mb-12 flex-wrap fi">
                                 <div className="group">
                                     <p className="text-[#00FF88] text-sm mb-1 font-semibold uppercase tracking-wider opacity-80 group-hover:opacity-100 transition-opacity">Total Item</p>
-                                    <p className="text-white text-3xl sm:text-5xl font-bold tracking-tight text-shadow-sm">2240+</p>
+                                    <p className="text-white/80 text-3xl sm:text-5xl font-bold tracking-tight text-shadow-sm">2240+</p>
                                 </div>
                                 <div className="group">
                                     <p className="text-[#00FF88] text-sm mb-1 font-semibold uppercase tracking-wider opacity-80 group-hover:opacity-100 transition-opacity">Profiles Whitelisted</p>
-                                    <p className="text-white text-3xl sm:text-5xl font-bold tracking-tight text-shadow-sm">1000+</p>
+                                    <p className="text-white/80 text-3xl sm:text-5xl font-bold tracking-tight text-shadow-sm">1000+</p>
                                 </div>
                             </div>
                             <button className="bp w-fit relative overflow-hidden group">

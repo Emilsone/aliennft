@@ -42,7 +42,7 @@ export default function HolderBenefits() {
 
     return (
         <section className="relative bg-[#000000] py-15 px-6 sm:px-10 overflow-hidden">
-            {/* Background Ambience */}
+           
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-[#00FF88] opacity-[0.02] blur-[150px] rounded-[100%] pointer-events-none" />
 
             <div className="max-w-[1400px] mx-auto relative z-10">
@@ -50,7 +50,7 @@ export default function HolderBenefits() {
                     <span className="text-[#00FF88] text-sm font-bold tracking-[0.3em] uppercase mb-4 block opacity-80">
                         Join The Invasion
                     </span>
-                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-white uppercase tracking-tight mx-auto max-w-2xl drop-shadow-[0_0_15px_rgba(255,255,255,0.05)]">
+                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-white/80 uppercase tracking-tight mx-auto max-w-2xl drop-shadow-[0_0_15px_rgba(255,255,255,0.05)]">
                         Holder <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00FF88] to-white/70">Benefits</span>
                     </h2>
                 </div>
@@ -59,12 +59,10 @@ export default function HolderBenefits() {
                     {benefits.map((item, index) => (
                         <div
                             key={index}
-                            className="group relative bg-[#0a0a0a] border border-white/5 p-8 sm:p-10 transition-all duration-500 hover:-translate-y-2 hover:border-[#00FF88]/30 hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)] overflow-hidden rounded-2xl"
+                            className="group relative bg-[#0a0a0a] border border-white/5 p-8 sm:p-10 transition-all duration-500 hover:-translate-y-2 hover:border-[#00FF88]/30 hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)] overflow-hidden rounded-md"
                         >
-                            {/* Hover animated background glow */}
+                        
                             <div className="absolute top-0 right-0 w-32 h-32 bg-[#00FF88]/20 mix-blend-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-[50px] rounded-full pointer-events-none" />
-
-                            {/* Animated Corner Bracket */}
                             <span className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-[#00FF88] opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-x-2 translate-y-2 group-hover:translate-x-0 group-hover:translate-y-0 z-20"></span>
 
                             <div className="relative z-10">
@@ -72,7 +70,7 @@ export default function HolderBenefits() {
                                     {item.icon}
                                 </div>
 
-                                <h3 className="text-2xl font-black text-white mb-4 tracking-wide uppercase group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-[#00FF88] transition-all duration-300">
+                                <h3 className="text-2xl font-black text-white/80 mb-4 tracking-wide uppercase group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-[#00FF88] transition-all duration-300">
                                     {item.title}
                                 </h3>
 

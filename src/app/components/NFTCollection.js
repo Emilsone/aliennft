@@ -85,7 +85,7 @@ export default function MusicCards() {
                             {/* Info Container */}
                             <div className="relative p-6 bg-gradient-to-t from-black via-black/95 to-transparent mt-[-60px] z-10 backdrop-blur-sm border-t border-white/5 group-hover:border-[#00FF88]/20 transition-colors duration-300">
                                 <p className="text-[#00FF88] text-[11px] font-bold uppercase tracking-widest mb-1 opacity-80 group-hover:opacity-100">{card.artist}</p>
-                                <h3 className="text-white text-xl font-black uppercase tracking-wide group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#00FF88] group-hover:to-white transition-all duration-300">
+                                <h3 className="text-white/80 text-xl font-black uppercase tracking-wide group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#00FF88] group-hover:to-white transition-all duration-300">
                                     {card.title}
                                 </h3>
 

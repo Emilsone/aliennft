@@ -123,7 +123,7 @@ export default function Marketplace() {
                     <div className="w-full lg:w-1/2 flex flex-col gap-6">
                         <div className="mb-6">
                             <span className="text-[#00FF88] text-sm font-bold tracking-[0.3em] uppercase block mb-3">Live Market</span>
-                            <h2 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tight">Active Auctions</h2>
+                            <h2 className="text-4xl md:text-5xl font-black text-white/80 uppercase tracking-tight">Active Auctions</h2>
                         </div>
 
                         <div className="flex flex-col gap-4">
