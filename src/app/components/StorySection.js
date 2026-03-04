@@ -3,8 +3,8 @@ import Image from 'next/image'
 
 export default function StorySection() {
     return (
-        <div className="relative px-4 py-10 sm:px-8 sm:py-14 md:p-20 bg-[#000000] overflow-hidden">
-            {/* Background Glow Effect */}
+        <div className="relative px-4 py-20 sm:px-8 sm:py-14 md:p-20 bg-[#000000] overflow-hidden">
+            
             <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-[#00FF88] opacity-[0.03] blur-[100px] rounded-full pointer-events-none agp" />
             <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[#00FF88] opacity-[0.02] blur-[120px] rounded-full pointer-events-none agp" style={{ animationDelay: "1s" }} />
 
@@ -18,7 +18,7 @@ export default function StorySection() {
                     overflow: "hidden"
                 }}
             >
-                {/* Glowing Left Border */}
+                
                 <div className="absolute left-0 top-0 bottom-0 w-[5px] bg-[#00FF88] shadow-[0_0_15px_#00FF88]" />
 
                 <div className="flex flex-col md:flex-row relative z-10" style={{ minHeight: "500px" }}>
@@ -40,7 +40,7 @@ export default function StorySection() {
                                 textShadow: "0 0 40px rgba(255,255,255,0.1)"
                             }}
                         >
-                            ALIENNFT STORY
+                            ALIENNFT 
                         </h1>
 
                         <div style={{ marginBottom: "32px" }}>

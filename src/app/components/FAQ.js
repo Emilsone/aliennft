@@ -28,15 +28,13 @@ export default function FAQ() {
     ];
 
     return (
-        <section className="relative bg-[#000000] py-15 px-6 sm:px-10 overflow-hidden">
-            {/* Background elements */}
+        <section className="relative bg-[#000000] py-20 px-6 sm:px-10 overflow-hidden">
+           
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#00FF88] opacity-[0.02] blur-[150px] rounded-full pointer-events-none" />
 
             <div className="max-w-[1000px] mx-auto relative z-10">
                 <div className="text-center mb-16 relative">
-                    <span className="text-[#00FF88] text-sm font-bold tracking-[0.3em] uppercase mb-4 block opacity-80">
-                        Information
-                    </span>
+                   
                     <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-white uppercase tracking-tight mx-auto drop-shadow-[0_0_15px_rgba(255,255,255,0.05)]">
                         Frequently Asked <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00FF88] to-white/70">Questions</span>
                     </h2>

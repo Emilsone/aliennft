@@ -45,7 +45,7 @@ export default function Marketplace() {
     ];
 
     return (
-        <section className="relative bg-[#000000] py-15 px-6 sm:px-10 overflow-hidden min-h-screen flex items-center">
+        <section className="relative bg-[#000000] py-25 px-6 sm:px-10 overflow-hidden min-h-screen flex items-center">
             {/* Background Atmosphere */}
             <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_50%,rgba(0,255,136,0.03),transparent_60%)] pointer-events-none" />
             <div className="absolute -left-40 bottom-40 w-[500px] h-[500px] bg-[#00FF88] opacity-[0.02] blur-[150px] rounded-full pointer-events-none" />

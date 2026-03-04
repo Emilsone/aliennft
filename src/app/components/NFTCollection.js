@@ -45,7 +45,7 @@ export default function MusicCards() {
     ];
 
     return (
-        <main className="relative grid place-items-center min-h-screen bg-[#000000] py-20 overflow-hidden">
+        <main className="relative grid place-items-center min-h-screen bg-[#000000] py-24 overflow-hidden">
             {/* Background Glow Elements */}
             <div className="absolute top-1/4 left-0 w-72 h-72 bg-[#00FF88] opacity-[0.02] blur-[100px] rounded-full pointer-events-none agp" />
             <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-[#00FF88] opacity-[0.03] blur-[120px] rounded-full pointer-events-none agp" style={{ animationDelay: "2s" }} />
