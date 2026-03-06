@@ -114,7 +114,9 @@ export default function Footer() {
           <p className="text-[#666666] text-[14px] text-center md:text-left tracking-wide">
             &copy; {new Date().getFullYear()} AlienNFT. All rights reserved.
           </p>
-
+          <p className="text-[#00FF88] text-[10px] text-center md:text-left tracking-wide">
+          Inspired by Nickelfox Design
+          </p>
         </div>
 
       </div>

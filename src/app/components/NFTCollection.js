@@ -46,7 +46,7 @@ export default function MusicCards() {
 
     return (
         <main className="relative grid place-items-center min-h-screen bg-[#000000] py-24 overflow-hidden">
-            {/* Background Glow Elements */}
+
             <div className="absolute top-1/4 left-0 w-72 h-72 bg-[#00FF88] opacity-[0.02] blur-[100px] rounded-full pointer-events-none agp" />
             <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-[#00FF88] opacity-[0.03] blur-[120px] rounded-full pointer-events-none agp" style={{ animationDelay: "2s" }} />
 
@@ -67,11 +67,11 @@ export default function MusicCards() {
                             key={index}
                             className="bg-[#0a0a0a] border border-[#1a1a1a] shadow-lg relative group overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)] hover:border-[#00FF88]/30 cursor-pointer rounded-sm"
                         >
-                            {/* Animated Corner Accents */}
+
                             <span className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-[#00FF88] opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-x-2 -translate-y-2 group-hover:translate-x-0 group-hover:translate-y-0 z-20"></span>
                             <span className="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-[#00FF88] opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 translate-y-2 group-hover:translate-x-0 group-hover:translate-y-0 z-20"></span>
 
-                            {/* Image Container */}
+
                             <div className="relative w-full h-80 overflow-hidden">
                                 <div className="absolute inset-0 bg-[#00FF88]/20 mix-blend-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
                                 <Image
@@ -82,7 +82,7 @@ export default function MusicCards() {
                                 />
                             </div>
 
-                            {/* Info Container */}
+
                             <div className="relative p-6 bg-gradient-to-t from-black via-black/95 to-transparent mt-[-60px] z-10 backdrop-blur-sm border-t border-white/5 group-hover:border-[#00FF88]/20 transition-colors duration-300">
                                 <p className="text-[#00FF88] text-[11px] font-bold uppercase tracking-widest mb-1 opacity-80 group-hover:opacity-100">{card.artist}</p>
                                 <h3 className="text-white/80 text-xl font-black uppercase tracking-wide group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#00FF88] group-hover:to-white transition-all duration-300">
@@ -101,7 +101,7 @@ export default function MusicCards() {
                 <div className="mt-16 flex justify-center">
                     <button className="bp relative overflow-hidden group border-[#00FF88] bg-transparent text-white hover:text-black">
                         <span className="relative z-10 transition-colors duration-300">EXPLORE MORE</span>
-                        <div className="absolute inset-0 h-full w-full bg-[#00FF88] transform scale-y-0 origin-bottom transition-transform duration-300 ease-out group-hover:scale-y-100 z-0"></div>
+                        <div className="absolute inset-0 h-full w-full bg-[#00FF88] transform scale-y-0 origin-bottom transition-transform duration-300 ease-in group-hover:scale-x-100 z-0"></div>
                     </button>
                 </div>
             </div>
