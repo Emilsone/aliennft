@@ -94,9 +94,8 @@ export default function Footer() {
               <p className="text-white font-semibold text-[16px] mb-6 tracking-wide">Legal</p>
               <ul className="flex flex-col gap-4">
                 {[
-                  { label: "Terms of service", href: "/404" },
+                  { label: "Terms of service", href: "/terms-of-service" },
                   { label: "Privacy policy", href: "/privacy-policy" },
-                  { label: "Cookie policy", href: "/404" },
                 ].map((item) => (
                   <li key={item.label}>
                     <Link href={item.href} className="group flex items-center text-[#aaaaaa] text-[14px] hover:text-white transition-colors duration-300">
