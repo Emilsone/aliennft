@@ -272,3 +272,13 @@ nav::-webkit-scrollbar {
   to   { transform: rotate(360deg); }
 }
 .badge-spin { animation: badgeSpin 14s linear infinite; }
+@keyframes bg-gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient-bg {
+  animation: bg-gradient 3s ease infinite;
+  background-size: 200% auto;
+}
