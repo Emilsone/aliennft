@@ -6,7 +6,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import LeadersBoard from '../components/LeadersBoard';
 
-// ✅ Separate named export — NOT default
+
 export function CountdownTimer({ endTime, isDetail = false }) {
     const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
     const [isUrgent, setIsUrgent] = useState(false);
@@ -66,7 +66,6 @@ export function CountdownTimer({ endTime, isDetail = false }) {
     );
 }
 
-// ✅ Data and constants outside the component — that's fine
 const marketplaceItems = [
     {
         id: "am-01",
@@ -261,10 +260,10 @@ const rarityColors = {
     Mythic: "text-red-400 bg-red-400/10 border-red-400/20"
 };
 
-// ✅ DEFAULT EXPORT wrapping ALL hooks, logic, and JSX
+
 export default function AlienMarket() {
 
-    // ✅ All hooks are now correctly inside the component
+    
     const [selectedItem, setSelectedItem] = useState(null);
     const [isMounted, setIsMounted] = useState(false);
     const [searchQuery, setSearchQuery] = useState("");
@@ -338,7 +337,7 @@ export default function AlienMarket() {
         setVisibleCount(8);
     };
 
-    // ✅ Single return inside the component
+
     return (
         <div className="min-h-screen bg-[#050505] text-white pt-24 pb-20 font-sans">
             <Header />
@@ -346,7 +345,7 @@ export default function AlienMarket() {
             <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 mb-10">
                 <div className="flex flex-col gap-4 mb-10">
                     <div className="flex items-center gap-3">
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight">Alien Market</h1>
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight text-white/80">Alien Market</h1>
                         <svg className="w-6 h-6 sm:w-8 sm:h-8 text-[#00FF88]" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                         </svg>
@@ -357,7 +356,7 @@ export default function AlienMarket() {
                     </p>
                 </div>
 
-                {/* Search + Filter Bar */}
+
                 <div className="bg-[#111] border border-white/10 rounded-xl p-4 sm:p-5 mb-8 flex flex-col lg:flex-row gap-4 lg:items-center">
                     <div className="relative flex-1">
                         <svg className="w-5 h-5 absolute left-4 top-1/2 -translate-y-1/2 text-white/40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -418,7 +417,7 @@ export default function AlienMarket() {
                     </div>
                 </div>
 
-                {/* Sort & View Toggle */}
+
                 <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
                     <p className="text-white/40 text-sm font-bold uppercase tracking-widest">{filteredAndSortedItems.length} Assets Found</p>
 

@@ -14,7 +14,7 @@ export default function LeadersBoard() {
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-8 border-b border-white/10 pb-4 gap-4">
                 <div>
                     <span className="text-[#00FF88] text-sm font-bold tracking-[0.3em] uppercase block mb-2">Elite Roster</span>
-                    <h2 className="text-3xl md:text-4xl font-black text-white uppercase tracking-tight">Top Collectors</h2>
+                    <h2 className="text-3xl md:text-4xl font-black text-white/80 uppercase tracking-tight">Top Collectors</h2>
                 </div>
                 <button className="text-white/50 hover:text-[#00FF88] text-sm font-bold uppercase tracking-wider transition-colors flex items-center gap-2 pb-1">
                     View All
@@ -27,11 +27,11 @@ export default function LeadersBoard() {
                     <table className="w-full text-left border-collapse min-w-[600px]">
                         <thead>
                             <tr className="border-b border-white/5 bg-black/40">
-                                <th className="p-4 sm:p-6 text-white/40 text-xs font-bold uppercase tracking-wider font-mono w-20">Rank</th>
-                                <th className="p-4 sm:p-6 text-white/40 text-xs font-bold uppercase tracking-wider font-mono">Collector</th>
-                                <th className="p-4 sm:p-6 text-white/40 text-xs font-bold uppercase tracking-wider font-mono">Volume</th>
-                                <th className="p-4 sm:p-6 text-white/40 text-xs font-bold uppercase tracking-wider font-mono">Owned</th>
-                                <th className="p-4 sm:p-6 text-white/40 text-xs font-bold uppercase tracking-wider font-mono text-right">Trend</th>
+                                <th className="p-4 sm:p-6 text-white/70 text-xs font-bold uppercase tracking-wider font-mono w-20">Rank</th>
+                                <th className="p-4 sm:p-6 text-white/70 text-xs font-bold uppercase tracking-wider font-mono">Collector</th>
+                                <th className="p-4 sm:p-6 text-white/70 text-xs font-bold uppercase tracking-wider font-mono">Volume</th>
+                                <th className="p-4 sm:p-6 text-white/70 text-xs font-bold uppercase tracking-wider font-mono">Owned</th>
+                                <th className="p-4 sm:p-6 text-white/70 text-xs font-bold uppercase tracking-wider font-mono text-right">Trend</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -55,7 +55,7 @@ export default function LeadersBoard() {
                                                 <path d="M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z" />
                                             </svg>
                                             {collector.volume}
-                                            <span className="text-white/40 text-[10px] uppercase font-semibold tracking-wider ml-1">ETH</span>
+                                            <span className="text-white/70 text-[10px] uppercase font-semibold tracking-wider ml-1">ETH</span>
                                         </div>
                                     </td>
                                     <td className="p-4 sm:p-6 font-medium text-white/80 text-sm sm:text-base">{collector.nfts}</td>
