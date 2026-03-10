@@ -137,14 +137,14 @@ export default function Marketplace() {
                                         <div className="absolute inset-0 bg-[#00FF88]/20 opacity-0 group-hover:opacity-100 transition-opacity z-10 mix-blend-overlay"></div>
                                         <Image src={item.image} alt={item.title} fill className="object-cover" />
                                     </div>
-                                    <div className="flex flex-col justify-center flex-1">
-                                        <div className="flex justify-between items-start mb-2">
-                                            <div>
-                                                <p className="text-[#00FF88] font-mono text-[11px] mb-1">{item.creator}</p>
-                                                <h4 className="text-white font-bold text-lg uppercase tracking-wide group-hover:text-[#00FF88] transition-colors">{item.title}</h4>
+                                    <div className="flex flex-col justify-center flex-1 min-w-0">
+                                        <div className="flex justify-between items-start mb-2 gap-3">
+                                            <div className="min-w-0 flex-1">
+                                                <p className="text-[#00FF88] font-mono text-[11px] mb-1 truncate">{item.creator}</p>
+                                                <h4 className="text-white font-bold text-lg uppercase tracking-wide group-hover:text-[#00FF88] transition-colors truncate">{item.title}</h4>
                                             </div>
                                             {item.hot && (
-                                                <span className="px-2 py-1 rounded bg-red-500/20 text-red-500 text-[10px] font-bold uppercase border border-red-500/30 flex items-center gap-1">
+                                                <span className="px-2 py-1 rounded bg-red-500/20 text-red-500 text-[10px] font-bold uppercase border border-red-500/30 flex items-center gap-1 shrink-0">
                                                     <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></span>
                                                     Hot
                                                 </span>
