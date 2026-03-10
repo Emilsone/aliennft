@@ -63,13 +63,13 @@ export default function NewsletterSubscribe() {
                 >
                     <div className="relative w-full max-w-lg bg-[#050505] rounded-[32px] overflow-hidden shadow-[0_0_100px_rgba(0,255,136,0.15)] border border-white/10 isolate animate-in zoom-in-95 duration-500">
 
-                        {/* Glowing Background effect inside modal */}
+
                         <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-3/4 h-1/2 bg-[#00FF88]/20 blur-[100px] -z-10 rounded-full" />
 
-                        {/* Top animated green line */}
+
                         <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#00FF88] to-transparent opacity-80" />
 
-                        {/* Close button with hover spin */}
+
                         <button
                             onClick={() => { setShowModal(false); setStatus("idle"); }}
                             className="absolute top-6 right-6 w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 text-white/50 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all duration-300 z-10 group"
@@ -81,7 +81,7 @@ export default function NewsletterSubscribe() {
 
                         <div className="flex flex-col items-center px-8 py-12 sm:px-12 sm:py-16 text-center">
 
-                            {/* Alien avatar with neon circle */}
+
                             <div className="relative w-28 h-28 sm:w-32 sm:h-32 mb-8 rounded-full p-[2px] bg-gradient-to-b from-[#00FF88] to-white/10 shadow-[0_0_50px_rgba(0,255,136,0.3)]">
                                 <div className="absolute -inset-2 bg-[#00FF88]/20 blur-xl rounded-full -z-10 animate-pulse"></div>
                                 <div className="w-full h-full rounded-full overflow-hidden bg-black flex items-center justify-center">
@@ -99,7 +99,8 @@ export default function NewsletterSubscribe() {
                                         Already Subscribed!
                                     </h2>
                                     <p className="text-white/60 text-[16px] sm:text-[18px] max-w-[360px] leading-relaxed mb-10">
-                                        Your signal was already received. Stay tuned—great things are emerging from the cosmos.
+                                        This email is already on our list. Stay tuned — great things are coming your way.
+
                                     </p>
                                 </>
                             ) : (
@@ -108,7 +109,7 @@ export default function NewsletterSubscribe() {
                                         Welcome Aboard!
                                     </h2>
                                     <p className="text-white/60 text-[16px] sm:text-[18px] max-w-[360px] leading-relaxed mb-10">
-                                        Your coordinates are locked. We'll transmit the latest drops and exclusive updates directly to your terminal.
+                                    You have successfully subscribed. We'll keep you updated on our product launch and everything exciting we have coming.
                                     </p>
                                 </>
                             )}
