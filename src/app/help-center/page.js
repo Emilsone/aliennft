@@ -220,16 +220,15 @@ export default function HelpCenter() {
                 <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center afu w-full">
                     {!activeCategory ? (
                         <>
-                            <h1 className="fc text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight text-white drop-shadow-md">
+                            <h1 className="fc text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight text-white/85 drop-shadow-md">
                                 AlienNFT <span className="text-[#00FF88]">Help Center</span>
                             </h1>
-                            <p className="fi text-gray-400 text-lg md:text-xl max-w-2xl mb-10 leading-relaxed font-light">
-                                Everything you need to know about the colony. Can&apos;t find your answer?
-                                Join our Discord or reach out on Twitter.
+                            <p className="fi text-white/80 text-lg md:text-xl max-w-4xl mb-10 leading-relaxed font-light">
+                                Our support team has compiled a list of common questions and answers to help you find tips, insights, and troubleshooting advice.
                             </p>
 
-                            
-                            <div className="relative w-full max-w-lg mb-6" ref={searchRef}>
+
+                            <div className="relative w-full max-w-lg mb-4" ref={searchRef}>
                                 <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-500">
                                     <SearchIcon />
                                 </div>
@@ -242,9 +241,9 @@ export default function HelpCenter() {
                                     className="w-full bg-[#111] border border-[#333] rounded-xl py-4 pl-12 pr-4 text-white placeholder-gray-500 focus:outline-none focus:border-[#00FF88] transition-colors ch"
                                 />
 
-                           
+
                                 {isDropdownVisible && searchQuery.trim() !== '' && (
-                                    <div className="w-full mt-2 bg-[#111] border border-[#333] rounded-xl shadow-2xl overflow-hidden max-h-60 overflow-y-auto text-left afu">
+                                    <div className="w-full mt-2 bg-[#111] border border-[#333] rounded-xl shadow-2xl overflow-hidden max-h-50 overflow-y-auto text-left afu">
                                         {searchResults.length > 0 ? (
                                             <ul className="py-2">
                                                 {searchResults.map((result, i) => (
@@ -293,7 +292,7 @@ export default function HelpCenter() {
 
             <section className="relative z-10 max-w-6xl mx-auto px-4 -mt-10 md:-mt-16">
                 {!activeCategory ? (
-                  
+
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 afu" style={{ animationDelay: '0.2s' }}>
                         {faqData.map((topic, idx) => (
                             <div
@@ -311,14 +310,14 @@ export default function HelpCenter() {
                                     {topic.title}
                                 </h3>
 
-                                <p className="fi text-sm text-gray-400 leading-relaxed font-light relative z-10">
+                                <p className="fi text-sm text-white/80 leading-relaxed font-light relative z-10">
                                     {topic.description}
                                 </p>
                             </div>
                         ))}
                     </div>
                 ) : (
-                   
+
                     <div className="max-w-3xl mx-auto bg-[#0a0a0a] border border-[#222] rounded-2xl p-6 md:p-10 shadow-xl slideIn mt-16 md:mt-24 mb-16 relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-[#00FF88] opacity-5 rounded-full blur-3xl pointer-events-none"></div>
 
@@ -339,7 +338,32 @@ export default function HelpCenter() {
                         </div>
                     </div>
                 )}
+                <div className="mt-12 pt-8 border-t border-[#222] flex flex-row items-center justify-between ">
+
+
+                    <p className="fi text-white/80 text-sm">
+                        Last updated: <span className="text-white/60">March 2026</span>
+                    </p>
+
+
+                    <div className="flex items-center gap-3">
+                        <span className="fi text-gray-500 text-sm">Was this helpful?</span>
+                        <button
+                            onClick={() => alert('Thanks for the feedback! 👍')}
+                            className="flex items-center gap-1 px-4 py-2 rounded-full border border-[#333] text-gray-400 hover:border-[#00FF88] hover:text-[#00FF88] transition-all text-sm fi"
+                        >
+                            👍 Yes
+                        </button>
+                        <button
+                            onClick={() => alert('Sorry to hear that. Join our Discord for help! 👽')}
+                            className="flex items-center gap-1 px-4 py-2 rounded-full border border-[#333] text-gray-400 hover:border-red-500 hover:text-red-500 transition-all text-sm fi"
+                        >
+                            👎 No
+                        </button>
+                    </div>
+                </div>
             </section>
+
         </div>
     );
 }
