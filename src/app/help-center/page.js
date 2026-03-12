@@ -1,6 +1,9 @@
 "use client";
+
 import React, { useState, useEffect, useRef } from 'react';
 
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const RocketIcon = () => (<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" /><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" /><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" /><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" /></svg>);
 const SparklesIcon = () => (<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" /></svg>);
@@ -210,160 +213,165 @@ export default function HelpCenter() {
     };
 
     return (
-        <div className="min-h-screen pb-24 text-white">
+        <div>
+            <div className="min-h-screen pb-24 text-white">
 
-            <section className="relative w-full overflow-hidden flex flex-col items-center justify-center text-center px-4 hero-bg transition-all duration-500 ease-in-out"
-                style={{ padding: activeCategory ? "4rem 1rem" : "8rem 1rem" }}>
-                <div className="absolute inset-0 hero-grid opacity-50 pointer-events-none"></div>
-                <div className="absolute inset-0 hero-glow opacity-60 pointer-events-none"></div>
+                <Header />
 
-                <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center afu w-full">
+                <section className="relative w-full overflow-hidden flex flex-col items-center justify-center text-center px-4 hero-bg transition-all duration-500 ease-in-out"
+                    style={{ padding: activeCategory ? "4rem 1rem" : "8rem 1rem" }}>
+                    <div className="absolute inset-0 hero-grid opacity-50 pointer-events-none"></div>
+                    <div className="absolute inset-0 hero-glow opacity-60 pointer-events-none"></div>
+
+                    <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center afu w-full">
+                        {!activeCategory ? (
+                            <>
+                                <h1 className="fc text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight text-white/85 drop-shadow-md">
+                                    AlienNFT <span className="text-[#00FF88]">Help Center</span>
+                                </h1>
+                                <p className="fi text-white/80 text-lg md:text-xl max-w-4xl mb-10 leading-relaxed font-light">
+                                    Our support team has compiled a list of common questions and answers to help you find tips, insights, and troubleshooting advice.
+                                </p>
+
+
+                                <div className="relative w-full max-w-lg mb-4" ref={searchRef}>
+                                    <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-500">
+                                        <SearchIcon />
+                                    </div>
+                                    <input
+                                        type="text"
+                                        value={searchQuery}
+                                        onChange={(e) => handleSearch(e.target.value)}
+                                        onFocus={() => { if (searchQuery) setIsDropdownVisible(true) }}
+                                        placeholder="Ask a question..."
+                                        className="w-full bg-[#111] border border-[#333] rounded-xl py-4 pl-12 pr-4 text-white placeholder-gray-500 focus:outline-none focus:border-[#00FF88] transition-colors ch"
+                                    />
+
+
+                                    {isDropdownVisible && searchQuery.trim() !== '' && (
+                                        <div className="w-full mt-2 bg-[#111] border border-[#333] rounded-xl shadow-2xl overflow-hidden max-h-50 overflow-y-auto text-left afu">
+                                            {searchResults.length > 0 ? (
+                                                <ul className="py-2">
+                                                    {searchResults.map((result, i) => (
+                                                        <li key={i}>
+                                                            <button
+                                                                onClick={() => handleResultClick(result.categoryId, result.qaIndex)}
+                                                                className="w-full text-left px-4 py-3 hover:bg-[#1a1a1a] transition-colors border-b border-[#222] last:border-0 group"
+                                                            >
+                                                                <div className="text-xs text-[#00FF88] font-semibold mb-1 uppercase tracking-wider">{result.categoryTitle}</div>
+                                                                <div className="text-white text-sm font-medium mb-1 group-hover:text-[#00FF88] transition-colors">{result.question}</div>
+                                                                <div className="text-gray-500 text-xs line-clamp-1">{result.answer}</div>
+                                                            </button>
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            ) : (
+                                                <div className="p-6 text-center text-gray-400 fi text-sm">
+                                                    No results found for &quot;{searchQuery}&quot;. <br />
+                                                    <a href="#" className="text-[#00FF88] hover:underline mt-2 inline-block">Try joining our Discord for help.</a>
+                                                </div>
+                                            )}
+                                        </div>
+                                    )}
+                                </div>
+                            </>
+                        ) : (
+                            <div className="w-full flex items-center justify-between pb-6 border-b border-[#333] slideIn">
+                                <button
+                                    onClick={() => {
+                                        setActiveCategory(null);
+                                        setOpenAccordionIdx(null);
+                                    }}
+                                    className="flex items-center gap-2 text-gray-400 hover:text-[#00FF88] transition-colors fi text-sm uppercase tracking-widest font-semibold bg-[#111] py-2 px-4 rounded-full border border-[#333] hover:border-[#00FF88]"
+                                >
+                                    <ArrowLeftIcon /> Back
+                                </button>
+                                <div className="flex items-center gap-3">
+                                    <div className="text-[#00FF88]">{activeCategory.icon}</div>
+                                    <h2 className="fc text-3xl md:text-4xl font-bold tracking-tight">{activeCategory.title}</h2>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                </section>
+
+
+                <section className="relative z-10 max-w-6xl mx-auto px-4 -mt-10 md:-mt-16">
                     {!activeCategory ? (
-                        <>
-                            <h1 className="fc text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight text-white/85 drop-shadow-md">
-                                AlienNFT <span className="text-[#00FF88]">Help Center</span>
-                            </h1>
-                            <p className="fi text-white/80 text-lg md:text-xl max-w-4xl mb-10 leading-relaxed font-light">
-                                Our support team has compiled a list of common questions and answers to help you find tips, insights, and troubleshooting advice.
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 afu" style={{ animationDelay: '0.2s' }}>
+                            {faqData.map((topic, idx) => (
+                                <div
+                                    key={topic.id}
+                                    onClick={() => setActiveCategory(topic)}
+                                    className="group bg-[#0a0a0a] border border-[#222] rounded-xl p-6 flex flex-col items-start text-left cursor-pointer ch relative overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all"
+                                >
+                                    <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#00FF88] opacity-0 group-hover:opacity-10 rounded-full blur-3xl transition-opacity duration-500 pointer-events-none"></div>
+
+                                    <div className="mb-5 p-3 rounded-lg bg-[#111] border border-[#222] text-gray-300 group-hover:text-[#00FF88] group-hover:border-[rgba(0,255,136,0.3)] transition-colors relative z-10">
+                                        {topic.icon}
+                                    </div>
+
+                                    <h3 className="fi text-xl font-semibold text-white mb-2 group-hover:text-[#00FF88] transition-colors relative z-10">
+                                        {topic.title}
+                                    </h3>
+
+                                    <p className="fi text-sm text-white/80 leading-relaxed font-light relative z-10">
+                                        {topic.description}
+                                    </p>
+                                </div>
+                            ))}
+                        </div>
+                    ) : (
+                        <div className="max-w-3xl mx-auto bg-[#0a0a0a] border border-[#222] rounded-2xl p-6 md:p-10 shadow-xl slideIn mt-16 md:mt-24 mb-16 relative overflow-hidden">
+                            <div className="absolute top-0 right-0 w-64 h-64 bg-[#00FF88] opacity-5 rounded-full blur-3xl pointer-events-none"></div>
+
+                            <p className="text-gray-400 fi text-sm md:text-base leading-relaxed mb-8 border-b border-[#222] pb-8">
+                                {activeCategory.description}
                             </p>
 
-
-                            <div className="relative w-full max-w-lg mb-4" ref={searchRef}>
-                                <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-500">
-                                    <SearchIcon />
-                                </div>
-                                <input
-                                    type="text"
-                                    value={searchQuery}
-                                    onChange={(e) => handleSearch(e.target.value)}
-                                    onFocus={() => { if (searchQuery) setIsDropdownVisible(true) }}
-                                    placeholder="Ask a question..."
-                                    className="w-full bg-[#111] border border-[#333] rounded-xl py-4 pl-12 pr-4 text-white placeholder-gray-500 focus:outline-none focus:border-[#00FF88] transition-colors ch"
-                                />
-
-
-                                {isDropdownVisible && searchQuery.trim() !== '' && (
-                                    <div className="w-full mt-2 bg-[#111] border border-[#333] rounded-xl shadow-2xl overflow-hidden max-h-50 overflow-y-auto text-left afu">
-                                        {searchResults.length > 0 ? (
-                                            <ul className="py-2">
-                                                {searchResults.map((result, i) => (
-                                                    <li key={i}>
-                                                        <button
-                                                            onClick={() => handleResultClick(result.categoryId, result.qaIndex)}
-                                                            className="w-full text-left px-4 py-3 hover:bg-[#1a1a1a] transition-colors border-b border-[#222] last:border-0 group"
-                                                        >
-                                                            <div className="text-xs text-[#00FF88] font-semibold mb-1 uppercase tracking-wider">{result.categoryTitle}</div>
-                                                            <div className="text-white text-sm font-medium mb-1 group-hover:text-[#00FF88] transition-colors">{result.question}</div>
-                                                            <div className="text-gray-500 text-xs line-clamp-1">{result.answer}</div>
-                                                        </button>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        ) : (
-                                            <div className="p-6 text-center text-gray-400 fi text-sm">
-                                                No results found for &quot;{searchQuery}&quot;. <br />
-                                                <a href="#" className="text-[#00FF88] hover:underline mt-2 inline-block">Try joining our Discord for help.</a>
-                                            </div>
-                                        )}
-                                    </div>
-                                )}
-                            </div>
-                        </>
-                    ) : (
-                        <div className="w-full flex items-center justify-between pb-6 border-b border-[#333] slideIn">
-                            <button
-                                onClick={() => {
-                                    setActiveCategory(null);
-                                    setOpenAccordionIdx(null);
-                                }}
-                                className="flex items-center gap-2 text-gray-400 hover:text-[#00FF88] transition-colors fi text-sm uppercase tracking-widest font-semibold bg-[#111] py-2 px-4 rounded-full border border-[#333] hover:border-[#00FF88]"
-                            >
-                                <ArrowLeftIcon /> Back
-                            </button>
-                            <div className="flex items-center gap-3">
-                                <div className="text-[#00FF88]">{activeCategory.icon}</div>
-                                <h2 className="fc text-3xl md:text-4xl font-bold tracking-tight">{activeCategory.title}</h2>
+                            <div className="flex flex-col relative z-10">
+                                {activeCategory.qas.map((qa, idx) => (
+                                    <AccordionItem
+                                        key={idx}
+                                        question={qa.question}
+                                        answer={qa.answer}
+                                        isOpen={openAccordionIdx === idx}
+                                        onClick={() => setOpenAccordionIdx(openAccordionIdx === idx ? null : idx)}
+                                    />
+                                ))}
                             </div>
                         </div>
                     )}
-                </div>
-            </section>
+                    <div className="mt-12 pt-8 border-t border-[#222] flex flex-row items-center justify-between">
 
 
-            <section className="relative z-10 max-w-6xl mx-auto px-4 -mt-10 md:-mt-16">
-                {!activeCategory ? (
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 afu" style={{ animationDelay: '0.2s' }}>
-                        {faqData.map((topic, idx) => (
-                            <div
-                                key={topic.id}
-                                onClick={() => setActiveCategory(topic)}
-                                className="group bg-[#0a0a0a] border border-[#222] rounded-xl p-6 flex flex-col items-start text-left cursor-pointer ch relative overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all"
-                            >
-                                <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#00FF88] opacity-0 group-hover:opacity-10 rounded-full blur-3xl transition-opacity duration-500 pointer-events-none"></div>
-
-                                <div className="mb-5 p-3 rounded-lg bg-[#111] border border-[#222] text-gray-300 group-hover:text-[#00FF88] group-hover:border-[rgba(0,255,136,0.3)] transition-colors relative z-10">
-                                    {topic.icon}
-                                </div>
-
-                                <h3 className="fi text-xl font-semibold text-white mb-2 group-hover:text-[#00FF88] transition-colors relative z-10">
-                                    {topic.title}
-                                </h3>
-
-                                <p className="fi text-sm text-white/80 leading-relaxed font-light relative z-10">
-                                    {topic.description}
-                                </p>
-                            </div>
-                        ))}
-                    </div>
-                ) : (
-
-                    <div className="max-w-3xl mx-auto bg-[#0a0a0a] border border-[#222] rounded-2xl p-6 md:p-10 shadow-xl slideIn mt-16 md:mt-24 mb-16 relative overflow-hidden">
-                        <div className="absolute top-0 right-0 w-64 h-64 bg-[#00FF88] opacity-5 rounded-full blur-3xl pointer-events-none"></div>
-
-                        <p className="text-gray-400 fi text-sm md:text-base leading-relaxed mb-8 border-b border-[#222] pb-8">
-                            {activeCategory.description}
+                        <p className="fi text-white/80 text-sm">
+                            Last updated: <span className="text-white/60">March 2026</span>
                         </p>
 
-                        <div className="flex flex-col relative z-10">
-                            {activeCategory.qas.map((qa, idx) => (
-                                <AccordionItem
-                                    key={idx}
-                                    question={qa.question}
-                                    answer={qa.answer}
-                                    isOpen={openAccordionIdx === idx}
-                                    onClick={() => setOpenAccordionIdx(openAccordionIdx === idx ? null : idx)}
-                                />
-                            ))}
+
+                        <div className="flex items-center gap-3">
+                            <span className="fi text-white/80 text-sm">Was this helpful?</span>
+                            <button
+                                onClick={() => alert('Thanks for the feedback! 👍')}
+                                className="flex items-center gap-1 px-4 py-2 rounded-full border border-[#333] text-gray-400 hover:border-[#00FF88] hover:text-[#00FF88] transition-all text-sm fi"
+                            >
+                                👍 Yes
+                            </button>
+                            <button
+                                onClick={() => alert('Sorry to hear that. Join our Discord for help! 👽')}
+                                className="flex items-center gap-1 px-4 py-2 rounded-full border border-[#333] text-gray-400 hover:border-red-500 hover:text-red-500 transition-all text-sm fi"
+                            >
+                                👎 No
+                            </button>
                         </div>
                     </div>
-                )}
-                <div className="mt-12 pt-8 border-t border-[#222] flex flex-row items-center justify-between ">
+                </section>
 
 
-                    <p className="fi text-white/80 text-sm">
-                        Last updated: <span className="text-white/60">March 2026</span>
-                    </p>
-
-
-                    <div className="flex items-center gap-3">
-                        <span className="fi text-gray-500 text-sm">Was this helpful?</span>
-                        <button
-                            onClick={() => alert('Thanks for the feedback! 👍')}
-                            className="flex items-center gap-1 px-4 py-2 rounded-full border border-[#333] text-gray-400 hover:border-[#00FF88] hover:text-[#00FF88] transition-all text-sm fi"
-                        >
-                            👍 Yes
-                        </button>
-                        <button
-                            onClick={() => alert('Sorry to hear that. Join our Discord for help! 👽')}
-                            className="flex items-center gap-1 px-4 py-2 rounded-full border border-[#333] text-gray-400 hover:border-red-500 hover:text-red-500 transition-all text-sm fi"
-                        >
-                            👎 No
-                        </button>
-                    </div>
-                </div>
-            </section>
-
+            </div>
+            <Footer />
         </div>
+
     );
 }

@@ -15,7 +15,7 @@ export default function Footer() {
                 <Image src="/alienlogo.svg" alt="AlienNFT Logo" width={170} height={120} className="h-12 w-auto filter drop-shadow-[0_0_15px_rgba(0,255,136,0.3)]" />
               </div>
             </div>
-            <p className="text-[#a0a0a0] max-w-sm text-[14.5px] leading-relaxed mb-8 opacity-80 group-hover:opacity-100 transition-opacity duration-300">
+            <p className="text-white/80 max-w-sm text-[14.5px] leading-relaxed mb-8 opacity-80 group-hover:opacity-100 transition-opacity duration-300">
               Merging art and utility. The definitive NFT collection for the modern digital era, beautifully crafted for the future.
             </p>
             <div className="flex items-center gap-5 space-x-2">
@@ -98,7 +98,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-white/10 pt-8 mt-12 mb-4 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-[#666666] text-[14px] text-center md:text-left tracking-wide">
+          <p className="text-white/80 text-[14px] text-center md:text-left tracking-wide">
             &copy; {new Date().getFullYear()} AlienNFT. All rights reserved.
           </p>
           <p className="text-[#00FF88] text-[10px] text-center md:text-left tracking-wide">

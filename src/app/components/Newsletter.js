@@ -106,7 +106,7 @@ export default function NewsletterSubscribe() {
                             ) : (
                                 <>
                                     <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-[#00FF88] to-emerald-200">
-                                        Welcome Aboard!
+                                       You are on our waitlist my firnd 
                                     </h2>
                                     <p className="text-white/60 text-[16px] sm:text-[18px] max-w-[360px] leading-relaxed mb-10">
                                     You have successfully subscribed. We'll keep you updated on our product launch and everything exciting we have coming.

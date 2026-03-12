@@ -46,14 +46,14 @@ export default function Marketplace() {
 
     return (
         <section className="relative bg-[#000000] py-25 px-6 sm:px-10 overflow-hidden min-h-screen flex items-center">
-            {/* Background Atmosphere */}
+\
             <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_50%,rgba(0,255,136,0.03),transparent_60%)] pointer-events-none" />
             <div className="absolute -left-40 bottom-40 w-[500px] h-[500px] bg-[#00FF88] opacity-[0.02] blur-[150px] rounded-full pointer-events-none" />
 
             <div className="max-w-[1400px] mx-auto w-full relative z-10">
                 <div className="flex flex-col lg:flex-row gap-16 items-center">
 
-                    {/* Left side: Hero Auction */}
+              
                     <div className="w-full lg:w-1/2 relative">
                         <div className="relative z-10 rounded-2xl p-1 bg-gradient-to-br from-[#00FF88]/40 via-[#00FF88]/5 to-black/80 shadow-[0_0_50px_rgba(0,255,136,0.1)] transition-transform duration-700 hover:scale-[1.02]">
                             <div className="bg-black rounded-xl overflow-hidden relative">
@@ -137,14 +137,14 @@ export default function Marketplace() {
                                         <div className="absolute inset-0 bg-[#00FF88]/20 opacity-0 group-hover:opacity-100 transition-opacity z-10 mix-blend-overlay"></div>
                                         <Image src={item.image} alt={item.title} fill className="object-cover" />
                                     </div>
-                                    <div className="flex flex-col justify-center flex-1 min-w-0">
-                                        <div className="flex justify-between items-start mb-2 gap-3">
-                                            <div className="min-w-0 flex-1">
-                                                <p className="text-[#00FF88] font-mono text-[11px] mb-1 truncate">{item.creator}</p>
-                                                <h4 className="text-white font-bold text-lg uppercase tracking-wide group-hover:text-[#00FF88] transition-colors truncate">{item.title}</h4>
+                                    <div className="flex flex-col justify-center flex-1">
+                                        <div className="flex justify-between items-start mb-2">
+                                            <div>
+                                                <p className="text-[#00FF88] font-mono text-[11px] mb-1">{item.creator}</p>
+                                                <h4 className="text-white font-bold text-lg uppercase tracking-wide group-hover:text-[#00FF88] transition-colors">{item.title}</h4>
                                             </div>
                                             {item.hot && (
-                                                <span className="px-2 py-1 rounded bg-red-500/20 text-red-500 text-[10px] font-bold uppercase border border-red-500/30 flex items-center gap-1 shrink-0">
+                                                <span className="px-2 py-1 rounded bg-red-500/20 text-red-500 text-[10px] font-bold uppercase border border-red-500/30 flex items-center gap-1">
                                                     <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></span>
                                                     Hot
                                                 </span>
