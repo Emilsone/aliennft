@@ -158,6 +158,7 @@ export default function HelpCenter() {
     const [activeCategory, setActiveCategory] = useState(null);
     const [openAccordionIdx, setOpenAccordionIdx] = useState(null);
     const searchRef = useRef(null);
+    const [modal, setModal] = useState(null);
 
 
     useEffect(() => {
@@ -226,16 +227,15 @@ export default function HelpCenter() {
                     <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center afu w-full">
                         {!activeCategory ? (
                             <>
-                                <h1 className="fc text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight text-white/85 drop-shadow-md">
+                                <h1 className="fc text-5xl md:text-6xl lg:text-8xl font-bold mb-6 tracking-tight text-white/85 drop-shadow-md">
                                     AlienNFT <span className="text-[#00FF88]">Help Center</span>
                                 </h1>
                                 <p className="fi text-white/80 text-lg md:text-xl max-w-4xl mb-10 leading-relaxed font-light">
                                     Our support team has compiled a list of common questions and answers to help you find tips, insights, and troubleshooting advice.
                                 </p>
 
-
                                 <div className="relative w-full max-w-lg mb-4" ref={searchRef}>
-                                    <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-500">
+                                    <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-white/80">
                                         <SearchIcon />
                                     </div>
                                     <input
@@ -244,7 +244,7 @@ export default function HelpCenter() {
                                         onChange={(e) => handleSearch(e.target.value)}
                                         onFocus={() => { if (searchQuery) setIsDropdownVisible(true) }}
                                         placeholder="Ask a question..."
-                                        className="w-full bg-[#111] border border-[#333] rounded-xl py-4 pl-12 pr-4 text-white placeholder-gray-500 focus:outline-none focus:border-[#00FF88] transition-colors ch"
+                                        className="w-full placeholder:text-white bg-[#111] border border-[#333] rounded-xl py-4 pl-12 pr-4 text-white placeholder-gray-500 focus:outline-none focus:border-[#00FF88] transition-colors ch"
                                     />
 
 
@@ -294,8 +294,6 @@ export default function HelpCenter() {
                         )}
                     </div>
                 </section>
-
-
                 <section className="relative z-10 max-w-6xl mx-auto px-4 -mt-10 md:-mt-16">
                     {!activeCategory ? (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 afu" style={{ animationDelay: '0.2s' }}>
@@ -343,23 +341,20 @@ export default function HelpCenter() {
                         </div>
                     )}
                     <div className="mt-12 pt-8 border-t border-[#222] flex flex-row items-center justify-between">
-
-
                         <p className="fi text-white/80 text-sm">
                             Last updated: <span className="text-white/60">March 2026</span>
                         </p>
 
-
                         <div className="flex items-center gap-3">
                             <span className="fi text-white/80 text-sm">Was this helpful?</span>
                             <button
-                                onClick={() => alert('Thanks for the feedback! 👍')}
+                                onClick={() => setModal('positive')}
                                 className="flex items-center gap-1 px-4 py-2 rounded-full border border-[#333] text-gray-400 hover:border-[#00FF88] hover:text-[#00FF88] transition-all text-sm fi"
                             >
                                 👍 Yes
                             </button>
                             <button
-                                onClick={() => alert('Sorry to hear that. Join our Discord for help! 👽')}
+                                onClick={() => setModal('negative')}
                                 className="flex items-center gap-1 px-4 py-2 rounded-full border border-[#333] text-gray-400 hover:border-red-500 hover:text-red-500 transition-all text-sm fi"
                             >
                                 👎 No
@@ -368,10 +363,47 @@ export default function HelpCenter() {
                     </div>
                 </section>
 
-
             </div>
-            <Footer />
-        </div>
 
+            <Footer />
+
+            {modal && (
+                <div
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm"
+                    onClick={() => setModal(null)}
+                >
+                    <div
+                        className="bg-[#111] border border-[#333] rounded-2xl p-8 max-w-sm w-full mx-4 flex flex-col items-center gap-4 shadow-2xl"
+                        onClick={e => e.stopPropagation()}
+                    >
+                        <div className="text-4xl">
+                            {modal === 'positive' ? '👍' : '👎'}
+                        </div>
+                        <h2 className="text-white/80 text-xl font-semibold fi">
+                            {modal === 'positive' ? 'Thanks for the feedback!' : 'Sorry to hear that.'}
+                        </h2>
+                        <p className="text-white/80 text-sm text-center fi">
+                            {modal === 'positive'
+                                ? "We're glad this was helpful to you."
+                                : 'Join our Discord for help and support!'}
+                        </p>
+                        {modal === 'negative' && (
+                            <a
+                                href="#"
+                                className="px-5 py-2 rounded-full bg-[#00FF88] text-black text-sm font-semibold hover:opacity-80 transition-all fi"
+                            >
+                                Join Discord 👽
+                            </a>
+                        )}
+                        <button
+                            onClick={() => setModal(null)}
+                            className="mt-1 px-5 py-2 rounded-full border border-[#333] text-gray-400 hover:border-white hover:text-white transition-all text-sm fi"
+                        >
+                            Close
+                        </button>
+                    </div>
+                </div>
+            )}
+        </div>
     );
 }
