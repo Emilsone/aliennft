@@ -282,3 +282,18 @@ nav::-webkit-scrollbar {
   animation: bg-gradient 3s ease infinite;
   background-size: 200% auto;
 }
+
+@keyframes scan {
+  0% { transform: translateY(-10px); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(40px); opacity: 0; }
+}
+@keyframes float {
+  0%, 100% { transform: translate(-50%, 0px); }
+  50% { transform: translate(-50%, -15px); }
+}
+@keyframes wave {
+  0%, 100% { transform: rotate(15deg); }
+  50% { transform: rotate(45deg); }
+}

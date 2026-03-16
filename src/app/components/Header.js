@@ -81,8 +81,8 @@ export default function Header() {
                         <Link href="/" className=" block text-[#FFFFFF] font-bold">Home</Link>
                         <Link href="/about-us" className=" block text-[#FFFFFF] font-bold">About</Link>
                         <Link href="/roadmap" className=" block text-[#FFFFFF] font-bold">Roadmap</Link>
-                        <Link href="/404" className=" block text-[#FFFFFF] font-bold">Collection</Link>
-                        <Link href="/404" className=" block text-[#FFFFFF] font-bold">AlienMarket</Link>
+                        <Link href="/collection" className=" block text-[#FFFFFF] font-bold">Collection</Link>
+                        <Link href="/alienmarket" className=" block text-[#FFFFFF] font-bold">AlienMarket</Link>
                         <Link href="/faq" className=" block text-[#FFFFFF] font-bold">FAQs</Link>
                     </div>
 

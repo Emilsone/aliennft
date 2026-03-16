@@ -143,7 +143,7 @@ const AccordionItem = ({ question, answer, isOpen, onClick }) => {
                 }}
                 className="transition-all duration-300 ease-in-out"
             >
-                <div ref={contentRef} className="pb-6 pt-2 text-gray-400 fi leading-relaxed whitespace-pre-line">
+                <div ref={contentRef} className="pb-6 pt-2 text-white/80 fi leading-relaxed whitespace-pre-line">
                     {answer}
                 </div>
             </div>

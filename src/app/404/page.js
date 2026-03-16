@@ -79,7 +79,7 @@ export default function NotFound() {
                     Lost in the void
                 </h2>
                 <p className="text-[#888888] text-base sm:text-lg mb-10 max-w-md mx-auto leading-relaxed">
-                    The coordinates you requested do not exist in this sector of the galaxy. It seems you have drifted off course.
+                    Hey! Looks like this page wandered off. Let's get you back home.
                 </p>
 
                 <Link href="/" className="relative inline-flex overflow-hidden group border border-[#00FF88] bg-transparent text-white hover:text-black transition-colors duration-300 font-bold uppercase tracking-widest text-sm px-10 py-5 rounded-sm">
@@ -87,30 +87,14 @@ export default function NotFound() {
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                         </svg>
-                        Return to Base
+                        Return to Back Home
                     </span>
                     <div className="absolute inset-0 h-full w-full bg-[#00FF88] transform scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100 z-0"></div>
                 </Link>
             </div>
 
-            {/* Required CSS Animations for 404 */}
-            <style dangerouslySetInnerHTML={{
-                __html: `
-        @keyframes scan {
-            0% { transform: translateY(-10px); opacity: 0; }
-            10% { opacity: 1; }
-            90% { opacity: 1; }
-            100% { transform: translateY(40px); opacity: 0; }
-        }
-        @keyframes float {
-            0%, 100% { transform: translate(-50%, 0px); }
-            50% { transform: translate(-50%, -15px); }
-        }
-        @keyframes wave {
-            0%, 100% { transform: rotate(15deg); }
-            50% { transform: rotate(45deg); }
-        }
-      `}} />
+
+
 
         </div>
     );
