@@ -68,7 +68,7 @@ export default function Footer() {
                   { label: "About us", href: "/about-us" },
                   { label: "FAQ", href: "/faq" },
                   { label: "Contact us", href: "/404" },
-                  { label: "Help Center", href: "/404" },
+                  { label: "Help Center", href: "/help-center" },
                 ].map((item) => (
                   <li key={item.label}>
                     <Link href={item.href} className="group flex items-center text-[#aaaaaa] text-[14px] hover:text-white transition-colors duration-300">
