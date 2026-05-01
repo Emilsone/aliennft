@@ -7,10 +7,10 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 const collectionStats = {
-  items: "10,000",
-  owners: "4,231",
+  items: "2,000",
+  owners: "1,231",
   floor: "0.85 ETH",
-  volume: "12.4K ETH",
+  volume: "8.4K ETH",
 };
 
 const nfts = [
@@ -139,7 +139,7 @@ export default function CollectionPage() {
             </div>
             <p className="text-white/60 mb-1 max-w-2xl">By <span className="text-white font-medium hover:text-[#00FF88] cursor-pointer transition-colors">Alien Labs</span></p>
             <p className="text-white/70 max-w-3xl text-sm sm:text-base leading-relaxed mt-4">
-              The Genesis collection of 10,000 uniquely generated alien avatars exploring the Ethereum blockchain.
+              The Genesis collection of 2,000 uniquely generated alien avatars exploring the Ethereum blockchain.
               Each alien grants access to the mothership, exclusive drops, and community governance.
             </p>
           </div>

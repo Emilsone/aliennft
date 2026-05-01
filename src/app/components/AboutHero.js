@@ -38,8 +38,8 @@ const IMAGE_HEIGHT = 290;
 const OVERFLOW_TOP = 86;
 
 const STATS = [
-    ["432K+", "Collections"],
-    ["200K+", "Artists"],
+    ["100k+", "Collections"],
+    ["20K+", "Artists"],
     ["10K+", "Community"],
 ];
 

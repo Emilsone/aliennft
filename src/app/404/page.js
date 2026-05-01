@@ -79,7 +79,7 @@ export default function NotFound() {
                     Lost in the void
                 </h2>
                 <p className="text-[#888888] text-base sm:text-lg mb-10 max-w-md mx-auto leading-relaxed">
-                    Hey! Looks like this page wandered off. Let's get you back home.
+                Oops, we couldn’t find that page. Let's get you back home.
                 </p>
 
                 <Link href="/" className="relative inline-flex overflow-hidden group border border-[#00FF88] bg-transparent text-white hover:text-black transition-colors duration-300 font-bold uppercase tracking-widest text-sm px-10 py-5 rounded-sm">
