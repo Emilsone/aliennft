@@ -41,12 +41,7 @@ export default function AboutPage() {
         { dot: 'Q4', year: '2023 — EXPANSION', title: 'Partnerships & Staking Launch', desc: 'Interstellar token staking goes live. First luxury brand collaboration announced. BINABOX program grows to 24+ ecosystem partners.' },
         { dot: 'NOW', year: '2024 — FUTURE', title: 'The Alien-verse Continues', desc: 'Phase 2 collection in development. Metaverse integration on the horizon. The colony grows stronger every day.' },
     ]
-    const partners = [
-        // '⬡ NEAR', '🔶 Binance Chain', 'Coinbase Wallet', '◈ Zerion', '⚡ Zapper',
-        // '📱 InstaApp', '∆ AToken', '🛡 Trust Wallet', '🎁 Giving Block', 'V Venly',
-        // '⬡ Pillar', '📡 DappRadar', '◎ SYNTHETIX', '⬛ UNSTOPPABLE', '📺 Live Coin Watch',
-        // '₿ bitpay', '🔷 Huobi Wallet',
-    ]
+    
     const socials = ['𝕏', 'in', '🔗']
     const divider = <div className="w-full h-px divider-bg" />
 
@@ -67,7 +62,7 @@ export default function AboutPage() {
                             BUILDING THE<br /><span className="text-[#00FF88]">ALIEN-VERSE</span>
                         </h2>
                         <p className="text-white/70 text-base leading-relaxed mt-4 max-w-lg">
-                            AlienNFT  was born from a simple idea, that digital collectibles should offer real, tangible benefits to their holders. Not just art. Not just bragging rights. A complete ecosystem.
+                            AlienNFT  was created from a simple idea, that digital collectibles should offer real, tangible benefits to their holders. Not just art. Not just bragging rights. A complete ecosystem.
                         </p>
                         <p className="text-white/70 text-base leading-relaxed mt-3 max-w-lg">
                             Every alien in our collection is a passport to an expanding universe of utilities, exclusive merchandise, token rewards, and luxury brand collaborations.
